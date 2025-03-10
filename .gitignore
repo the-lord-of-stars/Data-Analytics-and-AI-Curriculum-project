@@ -6,7 +6,8 @@
 
 ._freeze/
 
-._book/
+BookdownExample/_freeze/
+BookdownExample/_book/
 
 #idea
 .idea/
