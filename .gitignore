@@ -7,3 +7,9 @@
 ._freeze/
 
 ._book/
+
+#idea
+.idea/
+
+#vscode
+.vscode/
