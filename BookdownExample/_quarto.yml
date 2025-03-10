@@ -1,0 +1,35 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "R Bookdown Template"
+  chapters:
+    - index.qmd
+    - 02-Part2.qmd
+    - 03-Part3.qmd
+    - 04-Part4.qmd
+  downloads: [pdf]
+  
+
+language:
+  labels:
+    chapter: "Part "
+
+execute:
+  freeze: auto
+
+
+format:
+  html:
+    css: style.css
+    toc: true
+    margin-header: |
+     ![](/logos/UoNTransparent.png)
+  pdf:
+    documentclass: report
+    include-in-header: preamble.tex
+    pdf-engine: pdflatex
+    citation-package: natbib
+    keep-tex: true
+

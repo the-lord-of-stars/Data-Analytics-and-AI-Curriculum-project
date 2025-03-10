@@ -1,0 +1,68 @@
+\usepackage[a4paper, total={6in, 9in}]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhf{}
+\fancyhead[L]{\nouppercase{\leftmark}}
+\fancyhead[R]{\nouppercase{\rightmark}}
+\fancyfoot[C]{\thepage}
+
+\usepackage{titling}
+\pretitle{\begin{center}
+\includegraphics[width=2in,height=2in]{logos/UoNTransparent.png}\LARGE\\}
+\posttitle{\end{center}}
+
+\usepackage{booktabs}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\makeatletter
+\def\thm@space@setup{%
+  \thm@preskip=8pt plus 2pt minus 4pt
+  \thm@postskip=\thm@preskip
+}
+\makeatother
+
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+
+\usepackage[T1]{fontenc}                            % Font Styling
+\usepackage{helvet,mathrsfs}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
+% ----------------------------------------------------------------------
+%           User Created Environments
+% ----------------------------------------------------------------------
+
+%\theoremstyle{definition}
+
+\newtheoremstyle{break}% name
+  {}%         Space above, empty = `usual value'
+  {}%         Space below
+  {}% Body font
+  {}%         Indent amount (empty = no indent, \parindent = para indent)
+  {\bfseries}% Thm head font
+  {}%        Punctuation after thm head
+  {\newline}% Space after thm head: \newline = linebreak
+  {}%         Thm head spec
+\theoremstyle{break}
+
+%%%-----Note-----%%%
+\newtheorem*{note}{Note}
+%%%-----Tip-----%%%
+\newtheorem*{tip}{Tip}
+%%%-----Discussion-----%%%
+\newtheorem*{discussion}{Discussion}
+%%%-----Activity-----%%%
+\newtheorem*{activity}{Lecture Activity}
+%%%-----Common Mistake-----%%%
+\newtheorem*{mistake}{Common mistake}
+%%%-----Key Point-----%%%
+\newtheorem*{keypoint}{Key point}
+%%%-----Notation-----%%%
+\newtheorem*{notation}{Notation}

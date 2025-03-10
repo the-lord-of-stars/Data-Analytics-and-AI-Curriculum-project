@@ -1,0 +1,172 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "R Bookdown Template",
+    "section": "",
+    "text": "1 Introduction to R Bookdown\nThis is a template to create notes in R bookdown. For more information on R bookdown please see this website.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>R Bookdown Template</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#r-bookdown-installation",
+    "href": "index.html#r-bookdown-installation",
+    "title": "R Bookdown Template",
+    "section": "1.1 R Bookdown Installation",
+    "text": "1.1 R Bookdown Installation\n\nIf you do not already have R and RStudio installed on your computer, go to the RStudio Desktop download page and follow the instructions to install (1) R and (2) RStudio.\n\n\nUse RStudio to install R Bookdown\nOpen RStudio. In the console (box on the left-hand side in the default view), type\n\ninstall.packages(\"bookdown\")",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>R Bookdown Template</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#compile-a-book",
+    "href": "index.html#compile-a-book",
+    "title": "R Bookdown Template",
+    "section": "1.2 Compile a Book",
+    "text": "1.2 Compile a Book\nFollow the steps below to download and compile the source code for this template in R Bookdown.\n\nGo to the Accessible Maths Materials Sharepoint and click on the Download Source Files link under R Bookdown to download BookdownExample.zip.\nMove the file to the folder where you want to store your notes, then unzip it to the same folder.\n\n\nInstructions for unzipping files: [Windows, MacOS, Linux]\n\n\nIn RStudio in the top-right corner click on the blue Project sign. Click on “Open Project” and navigate to your unzipped file, then open r_bookdown_template.Rproj.\nIn the box with “Environment”, “History”, “Connections”, “Build”, “Tutorial”, click on the “Build” tab, then click on the “Build Book” button.\nOn clicking the button in the previous step, a preview of your compiled book should appear. To view your book outside of RStudio, navigate to the “_book” subfolder that was created when you compiled your book, then open index.html in your favourite browser.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>R Bookdown Template</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#upload-your-book-to-moodle",
+    "href": "index.html#upload-your-book-to-moodle",
+    "title": "R Bookdown Template",
+    "section": "1.3 Upload Your Book to Moodle",
+    "text": "1.3 Upload Your Book to Moodle\nPlease watch the video guide below.\nIf the link does not work then please click here.\n\n\nPlease watch the video guide below.\nIf the link does not work then please click here.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>R Bookdown Template</span>"
+    ]
+  },
+  {
+    "objectID": "02-Part2.html",
+    "href": "02-Part2.html",
+    "title": "2  Some R Bookdown Features",
+    "section": "",
+    "text": "2.1 Bookdown File Structure\nIn this section, we describe the basic use of R Bookdown and introduce some of the more advanced features/customisation. What we present here is representative but not exhaustive. R Bookdown is very well documented by its creator (Yihui Xie) and others.\nThere are a number of files that make up the R Bookdown structure, but you’ll be glad to know that you can ignore most of them. The ones you will spend most of your time editing are the ones with the .Rmd extension.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Some R Bookdown Features</span>"
+    ]
+  },
+  {
+    "objectID": "02-Part2.html#bookdown-file-structure",
+    "href": "02-Part2.html#bookdown-file-structure",
+    "title": "2  Some R Bookdown Features",
+    "section": "",
+    "text": "index.Rmd is recognised by R Bookdown as the first chapter of your book. You can define the title and author of your book in lines 2 and 3 of this file respectively. You should not need to edit the remaining information in lines 4-15. Start writing the first section of your book after the --- in line 16.\nThe remaining .Rmd files contain the subsequent sections of your book. RMarkdown will read the files in alphabetical order, so a sensible naming convention for your files is 01-&lt;section-name&gt;.Rmd, 02-&lt;section-name&gt;.Rmd, etc. Note that each file can contain multiple sections.\n\n\nIf you prefer, you can write your entire book in index.Rmd, but this is not recommended as your file could get very big!\n\n\noutput.yml provides R Bookdown with some information on how to compile your document. The only part of this you need to edit is line 13, where you can replace Lisa’s name with your own and update the link to your homepage.\nbookdown.yml provides R Bookdown with some more information on your document details. The only lines of interest are:\n\nLine 1: Update this to change the output filename of your book;\nLine 4: Update this to change the prefix of each # Heading. For this template, we have set this to \"Part \" (note the space at the end). If you would rather not have a prefix at all, comment out this line by inserting a # at the start of line 4.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Some R Bookdown Features</span>"
+    ]
+  },
+  {
+    "objectID": "02-Part2.html#markdown-basics",
+    "href": "02-Part2.html#markdown-basics",
+    "title": "2  Some R Bookdown Features",
+    "section": "2.2 Markdown Basics",
+    "text": "2.2 Markdown Basics\nIf you’re completely new to R Markdown, the Markdown Basics guide provides an excellent overview of the most common syntax. Most of it is very straightforward and intuitive, but will take some getting used to if you are accustomed to LaTeX.\n\n2.2.1 Examples\n\nEmphasis\nEmphasise parts of text using **bold** or __bold__.\n\nYou can use *italic* or _italic_ for italic text, but it is best to avoid this when creating accessible documents.\n\n\n\nHeadings\nUse the syntax\n\n# Heading 1\n## Heading 2\n### Heading 3\n#### Heading 4\n##### Heading 5\n###### Heading 6\n\nfor headings, subheadings, etc. R Bookdown will automatically number your headings. To suppress the heading number, add {-} at the end of your heading, e.g. ## Unnumbered Subheading {-}.\n\n\nLinks and References\nAdd a link to a url using the syntax [link text](link url).\n\n[School of Mathematical Sciences](https://www.nottingham.ac.uk/mathematics/?target=_blank)\nSchool of Mathematical Sciences\nAdding ?target=_blank to the end of the URL forces the link to open in a new tab when clicked.\n\n\n Link to other parts of your book using heading names.\nFind out how to [Upload your book to Moodle][Upload Your Book to Moodle].\nFind out how to [Upload your book to Moodle][Upload Your Book to Moodle].\n\n\nWe recommend suppressing numbers from Heading 4 onwards.\n\n\n\nLists\nCreate unordered lists using the syntax\n\n* Item 1\n* Item 2\n    + Item 2a\n    + Item 2a\n\nWhich produces the output:\n\nItem 1\nItem 2\n\nItem 2a\nItem 2a\n\n\nSimilarly, an ordered list can be created using the syntax\n\n1. Item 1\n2. Item 2\n    a. Item 2a\n    b. Item 2b\n\n\nItem 1\nItem 2\n\nItem 2a\nItem 2b",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Some R Bookdown Features</span>"
+    ]
+  },
+  {
+    "objectID": "02-Part2.html#mathematics",
+    "href": "02-Part2.html#mathematics",
+    "title": "2  Some R Bookdown Features",
+    "section": "2.3 Mathematics",
+    "text": "2.3 Mathematics\nMathematics can be entered using familiar LaTeX commands and delimiters.\n\nInline Mathematics\nInline mathematics is delimited using either $...$ or \\(...\\).\n\n The syntax\n\nConsider the equation $y = mx+c$.\n\nyields: Consider the equation \\(y = mx+c\\).\n\n\n\nDisplay Mathematics\nDisplay mathematics (unnumbered) is delimited using either $$...$$, \\[...\\] or \\begin{equation*}...\\end{equation*}.\n\n\n$$\n \\int_0^\\infty e^{-x^2}\\,\\mathrm{d}x = \\frac{\\sqrt{\\pi}}{2}. \n$$\n\nyields:\n\\[\n\\int_0^\\infty e^{-x^2}\\,\\mathrm{d}x = \\frac{\\sqrt{\\pi}}{2}.\n\\]\n\n\n\nNumbered Equation\nEnter a numbered equation in the usual way using \\begin{equation}...\\end{equation}. Whilst the equation environment follows conventional LaTeX syntax, R Bookdown does not support \\label, \\eqref to tag and reference equations. See the example below for how to tag and reference an equation in R Bookdown.\n\n\n\\begin{equation} \n  f\\left(k\\right) = \\binom{n}{k} p^k\\left(1-p\\right)^{n-k}\n  (\\#eq:binom)\n\\end{equation} \n    \nConsider the Binomial Theorem \\@ref(eq:binom).\n\n\\[\\begin{equation}\n  f\\left(k\\right) = \\binom{n}{k} p^k\\left(1-p\\right)^{n-k}\n  (\\#eq:binom)\n\\end{equation}\\]\nConsider the Binomial Theorem @ref(eq:binom).\n\n\nDo not use underscores (“_“) in your labels for cross referencing equations, or any other parts (e.g. tables, theorems, etc. which are discussed in later sections). If you have a label with multiple words, either just write them all in lower case, or use camel case, e.g. #PythThm instead of #pyth_thm.\nUnderscores are special characters in Markdown that are used to delimit italic text (see Markdown Basics), so using this character in labels causes a conflict.\n\n\n\nUser-Defined Commands\nYou may be the sort of person who likes writing your own LaTeX commands to save some typing. You can add custom commands anywhere in a .Rmd file and they will work in the expected way, as long as you define the command before its first use in your book.\n\nThe best place to define your custom commands is in index.md just below Line 16.\n\n\nDefining the following custom commands in index.md\n\n\\newcommand{\\rd}{\\mathrm{d}}\n\\newcommand{\\deriv}[2]{\\frac{\\rd #1}{\\rd #2}}\n\\newcommand{\\nthderiv}[3]{\\frac{\\rd^#3 #1}{\\rd #2}}\n\nthen writing\n\nConsider the differential equation\n$$\n\\nthderiv{y}{x}{2}+3\\deriv{y}{x}-y=0.\n$$\n\nyields:\nConsider the differential equation \\[\n\\frac{\\mathrm{d}^2 y}{\\mathrm{d}x}+3\\frac{\\mathrm{d}y}{\\mathrm{d}x}-y=0.\n\\]\n\n\n\nMultiple and Multiline Equations\nR Bookdown interprets the align environment in the usual way. You can tag each line individually to refer back to specific equations. Replace the tag with \\notag to suppress the numbering of a line.\n\nUnfortunately, R Bookdown does not support the subequations environment (e.g. for labelling equations 2.2a, 2.2b etc.)\n\n\n\n\\begin{align}\ng(X_{n}) &= g(\\theta)+g'({\\tilde{\\theta}})(X_{n}-\\theta) (\\#eq:align1) \\\\\n\\sqrt{n}[g(X_{n})-g(\\theta)] &= g'\\left({\\tilde{\\theta}}\\right)\n  \\sqrt{n}[X_{n}-\\theta ] \n(\\#eq:align2)\n\\end{align}\n  \nConsider the equations \\@ref(eq:align1) and \\@ref(eq:align2).\n\n\\[\\begin{align}\ng(X_{n}) &= g(\\theta)+g'({\\tilde{\\theta}})(X_{n}-\\theta) (\\#eq:align1) \\\\\n\\sqrt{n}[g(X_{n})-g(\\theta)] &= g'\\left({\\tilde{\\theta}}\\right)\n  \\sqrt{n}[X_{n}-\\theta ]\n(\\#eq:align2)\n\\end{align}\\]\nConsider equations @ref(eq:align1) and @ref(eq:align2).\n\n\nThere is a (possibly unavoidable) bug with the cross-referencing of multiple equations in the align environment. Whilst adding a label to each equation successfully adds a number to the equation where it is displayed, the hyperlink does not work for the first equation. In general, only the hyperlink to the final equation will work. In the situation where you have multiple equations and it is important to be able to individually reference each one, we recommend writing each equation in its own equation environment using the method in Example @ref(exm:EqRef).\n\nYou can use the split environment inside equation so that all lines in a multiline equation share the same number.\n\n\n\\begin{equation} \n\\begin{split}\n\\mathrm{Var}(\\hat{\\beta}) & =\\mathrm{Var}((X'X)^{-1}X'y)\\\\\n & =(X'X)^{-1}X'\\mathrm{Var}(y)((X'X)^{-1}X')'\\\\\n & =(X'X)^{-1}X'\\mathrm{Var}(y)X(X'X)^{-1}\\\\\n & =(X'X)^{-1}X'\\sigma^{2}IX(X'X)^{-1}\\\\\n & =(X'X)^{-1}\\sigma^{2}\n\\end{split}\n(\\#eq:var-beta)\n\\end{equation} \n\nSee \\@ref(eq:var-beta) for the calculation of \\(\\mathrm{Var}(\\hat{\\beta})\\).\n\n\\[\\begin{equation}\n\\begin{split}\n\\mathrm{Var}(\\hat{\\beta}) & =\\mathrm{Var}((X'X)^{-1}X'y)\\\\\n& =(X'X)^{-1}X'\\mathrm{Var}(y)((X'X)^{-1}X')'\\\\\n& =(X'X)^{-1}X'\\mathrm{Var}(y)X(X'X)^{-1}\\\\\n& =(X'X)^{-1}X'\\sigma^{2}IX(X'X)^{-1}\\\\\n& =(X'X)^{-1}\\sigma^{2}\n\\end{split}\n(\\#eq:var-beta)\n\\end{equation}\\]\nSee @ref(eq:var-beta) for the calculation of \\(\\mathrm{Var}(\\hat{\\beta})\\).",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Some R Bookdown Features</span>"
+    ]
+  },
+  {
+    "objectID": "02-Part2.html#tables",
+    "href": "02-Part2.html#tables",
+    "title": "2  Some R Bookdown Features",
+    "section": "2.4 Tables",
+    "text": "2.4 Tables\nHere is a basic table.\n\n|Header 1| Header 2 | Header 3|\n|:------|:-------|:---------|\n|Row 1 | Number | Number|\n|Row 2 | Number | Number|\n\n\n\n\nHeader 1\nHeader 2\nHeader 3\n\n\n\n\nRow 1\nNumber\nNumber\n\n\nRow 2\nNumber\nNumber\n\n\n\n\nOnly very simple tables can be created using Markdown syntax (by design). This is generally a good thing for accessibility, but if you want to create more intricate tables, you can do so using raw HTML inside a .Rmd file (HTML is interpreted by R Bookdown just as readily as Markdown).\nIf you get fed up dealing with plain text to make your table, there are many good Markdown/HTML table generators online. I use this one, but others are available.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Some R Bookdown Features</span>"
+    ]
+  },
+  {
+    "objectID": "02-Part2.html#images",
+    "href": "02-Part2.html#images",
+    "title": "2  Some R Bookdown Features",
+    "section": "2.5 Images",
+    "text": "2.5 Images\nWe look at two approaches for adding the same image. We add alternative text (usually referred to as “alt text”) in both cases. You will see how R Markdown treats them differently.\n\nThe files must either be in the same directory as your .Rmd file(s), or you need to specify the path to the subfolder containing your image file.\n\n\nApproach 1 (Markdown)\nThis is the easier approach but the alt text is not as nice (we have cheated and written it as a caption).\n![Here is the alt text](workers.png)\n\n\n\nHere is the alt text\n\n\n\n\nApproach 2 (R)\nThis is a slightly more difficult approach and requires the use of R, but it is better for “hiding” the alternative text.\n\n```{r, echo=FALSE, out.width=\"600px\", fig.alt=\"Here is the alt text\", fig.cap=\"Here is the image caption.\"}\n    knitr::include_graphics(\"workers.png\")\n```\n\n\n\n\n\n\nHere is the image caption.\n\n\n\n\nThe student could view the alt text by right clicking on the image and selecting “Inspect Element”, or by using suitable assistive technology.\n\nThis is the preferred approach since we can distinguish between image captions and alt text. Also, we benefit from R’s automatic numbering of figures in their captions.\n\n\n\n2.5.1 Generating Images Using R (or Python)\nPress Ctrl+Alt+I to add R code. This adds the chunk below and you can add in R code. Python (or other languages) can also be added by pressing the ‘+C’ image at the top right corner.\n\n\nx&lt;-rnorm(100,mean=4,sd=2)\ny&lt;-x^{2}\nplot(x,y,lwd=4,main=\"Mock plot\")\n\n\n\n\nA graph demonstrating…\n\n\n\n\n\nYou can also hide code, so that graphs are produced without showing the code, or you can hide output so the code is shown without the results etc. see the R Markdown cheatsheet for more information.\n\nThe graph is produced but the code is hidden, by setting echo=FALSE.\n\n\n\n\n\nA graph demonstrating…\n\n\n\n\n\n\nHere, the code is shown but the graph is not shown using eval=FALSE.\n\nx&lt;-rnorm(100,mean=4,sd=2)\ny&lt;-x^{2}\nplot(x,y,lwd=4,main=\"Mock plot\")",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Some R Bookdown Features</span>"
+    ]
+  },
+  {
+    "objectID": "02-Part2.html#environments",
+    "href": "02-Part2.html#environments",
+    "title": "2  Some R Bookdown Features",
+    "section": "2.6 Environments",
+    "text": "2.6 Environments\nR Bookdown has several built-in environments, such as Theorem, Example, etc to help organise your notes.\n\n2.6.1 Numbered Environments\nThe following environments have an automatic numbering system and so can be cross-referenced.\n\n(#tab:num-envs) Numbered Environments in R Bookdown\n\n\nEnvironment\nPrinted Name\nLabel Prefix\n\n\n\n\ntheorem\nTheorem\nthm\n\n\nlemma\nLemma\nlem\n\n\ncorollary\nCorollary\ncor\n\n\nproposition\nProposition\nprp\n\n\nconjecture\nConjecture\ncnj\n\n\ndefinition\nDefinition\ndef\n\n\nexample\nExample\nexm\n\n\nexercise\nExercise\nexr\n\n\nhypothesis\nHypothesis\nhyp\n\n\n\n\n This green box is the example environment. To invoke the example environment, use the syntax\n\n::: {.example name=\"Example Name\"}\n&lt;br&gt;\nExample text...\n:::\n\nIf you do not wish to name your example, then write\n\n:::example\n&lt;br&gt;\nExample text...\n:::\n\nThe &lt;br&gt; tag is used to start the example text on a new line.\n\n\nCross Referencing Environments\nNumbered environments are cross referenced in a similar way to equations (see Section 2.3).\n\n::: {.theorem #pyth name=\"Pythagoras' Theorem\"}\nFor a right triangle, if $c$ denotes the length of the hypotenuse\nand $a$ and $b$ denote the lengths of the other two sides, we have\n$$a^2 + b^2 = c^2$$\n:::\n  \nWe use Pythagoras' Theorem \\@ref(thm:pyth) to find the length of the missing side.\n\n\n For a right-angled triangle, if \\(c\\) denotes the length of the hypotenuse and \\(a\\) and \\(b\\) denote the lengths of the other two sides, we have \\[a^2 + b^2 = c^2.\\]\n\nWe use Pythagoras’ Theorem @ref(thm:pyth) to find the length of the missing side.\nThe syntax for referencing environments is \\@ref(&lt;prefix&gt;:&lt;label&gt;). Refer to Table @ref(tab:num-envs) for the prefix corresponding to each environment type.\n\nThe prefix for a table reference is tab.\n\n\n\n\n2.6.2 Unnumbered Environments\n\n(#tab:oth-envs) Other Environments in R Bookdown\n\n\nEnvironment\nPrinted Name\n\n\n\n\nproof\nProof\n\n\nremark\nRemark\n\n\nnote\nNote\n\n\ntip\nTip\n\n\nactivity\nActivity\n\n\ndiscussion\nDiscussion\n\n\nsolution\nSolution\n\n\n\n\nWe have written a custom template for use in The School of Mathematical Sciences with a specific colour scheme and some additional environments. The code for the School Template is in style.css.\nIf you want to make adjustments to the colour scheme, or add your own custom environments, then either edit your local copy of style.css, or (if you’re not familiar with CSS) contact Tom or Lisa to request a change/update.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Some R Bookdown Features</span>"
+    ]
+  },
+  {
+    "objectID": "03-Part3.html",
+    "href": "03-Part3.html",
+    "title": "3  Interactivity",
+    "section": "",
+    "text": "3.1 Reveal Hidden Text\nThe great thing with using HTML is that you can make your notes as interactive as you like. This section shows you a few ways of introducing interactivity to your notes, but the possibilities are endless.\nYou can hide and unhide some text (e.g. hints or optional solutions) as in the following example.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Interactivity</span>"
+    ]
+  },
+  {
+    "objectID": "03-Part3.html#reveal-hidden-text",
+    "href": "03-Part3.html#reveal-hidden-text",
+    "title": "3  Interactivity",
+    "section": "",
+    "text": "Use the “&lt;details&gt;” and “&lt;summary&gt;” html tags to hide and reveal text interactively.\n\n&lt;details&gt;\n  &lt;summary&gt;click to unhide&lt;/summary&gt;\n  Here is some hidden text.\n&lt;/details&gt;\n\n\n\nclick to unhide.\n\n\nThis is the text/image etc. that I want to hide.\n\\(a+b\\)\n\nx&lt;-rnorm(100,mean=4,sd=2)\ny&lt;-x^{2}\nplot(x,y,lwd=4,main=\"Mock plot\")\n\n\n\n\nA graph demonstrating…",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Interactivity</span>"
+    ]
+  },
+  {
+    "objectID": "03-Part3.html#embedded-video",
+    "href": "03-Part3.html#embedded-video",
+    "title": "3  Interactivity",
+    "section": "3.2 Embedded Video",
+    "text": "3.2 Embedded Video\nPlease watch the video below to see how we have embedded this video from mediaspace.\nIf the link does not work then please use this alternative link.\n\n\n\n\nHow to use the template - Another video example\nNote to use all of this you will need R studio and R to be installed on your machine. Then you just need to open the project in R studio.\nThen in R studio just create a new .Rmd file to add a new chapter and just save it as 01, 02, 03, 04 etc. in the name for the order you want that chapter to appear.\nA video below shows what to do in more detail. If the video does not work then please use this alternative link.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Interactivity</span>"
+    ]
+  },
+  {
+    "objectID": "03-Part3.html#quizzes",
+    "href": "03-Part3.html#quizzes",
+    "title": "3  Interactivity",
+    "section": "3.3 Quizzes",
+    "text": "3.3 Quizzes\n\n3.3.1 Xerte\n\n For Xerte, just paste the embed code. Example below. Note, if you have your settings on Xerte so that the file can only be viewed from Moodle, then the Xerte file will only show if the Rbookdown file is uploaded to Moodle.\n\n\n\n\n\nIf the interactive slides above do not work then please access them using this link.\n\n\n3.3.2 Itempool\n\nHere we use r commands to add in a URL.\n\n\n\n\n\n\n\n\n\n3.3.3 Microsoft Forms\n\nThis one has been used by copying and pasting the embed code from the microsoft form share settings.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Interactivity</span>"
+    ]
+  },
+  {
+    "objectID": "04-Part4.html",
+    "href": "04-Part4.html",
+    "title": "4  Adding colour",
+    "section": "",
+    "text": "4.1 Adding colour to maths output\nThis is an advanced feature for bookdown and is not suitable for beginners.\nIt is quite easy to use HTML to add colour to text. However when you change the theme to night you will not be able to see the colour.\nSteve Wang has provided a solution that uses HTML and R to use colours that change in the three different themes.\nIn this template we have set three default colour schemes that are accessible in all of the three themes.\nIf you would like to change the colour of some text you can do by creating the following formula in R. The class myhl is defined in the style file.\nThe below function is so you can see the output of the above function and can be deleted.\nWe can them add some words in blue. You may want to see what happens when you change the theme to night in the output.\nWe can then define another colour using the following\nHere is some text using the red theme\nFinally here is some text using the final colour scheme.\nThis is even more complicated and uses the style file. We have set three default colours for blue, red and green that meet accessibility requirements in the three different themes.\n\\[\ng(\\color{blue}{x-1}) = 3(\\color{red}{x-1}) + 1 = \\color{green}{3x} - 3 + 1 = 3x-2.\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Adding colour</span>"
+    ]
+  },
+  {
+    "objectID": "04-Part4.html#new-box-types",
+    "href": "04-Part4.html#new-box-types",
+    "title": "4  Adding colour",
+    "section": "4.2 New box types",
+    "text": "4.2 New box types\nWe have added some new box types to the template.\n\nWatch out for this common mistake!\n\n\nHere is a key point.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Adding colour</span>"
+    ]
+  }
+]
