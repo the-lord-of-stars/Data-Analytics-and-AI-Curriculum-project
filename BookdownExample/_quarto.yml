@@ -27,7 +27,11 @@ format:
     margin-header: |
      ![](/logos/UoNTransparent.png)
   pdf:
-    documentclass: report
+    toc: true
+    shift-heading-level-by: 1
+    number-sections: true
+    number-depth: 3
+    documentclass: article
     include-in-header: preamble.tex
     pdf-engine: pdflatex
     citation-package: natbib

@@ -1,18 +1,10 @@
 ---
-title: "R Bookdown Template "
 author: "Lisa Mott & Tom Wicks"
-site: bookdown::bookdown_site
-output:
-  bookdown::gitbook:
-   # pandoc_args: ["--number-offset=6"] Optional I want the chapters to be week 7, week 8 etc.
-    config:
-      sharing: false
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: true
 description: "This is the notes for your_module_name"
 ---
-
 
 # Introduction to R Bookdown
 

@@ -10,7 +10,7 @@
 
 \usepackage{titling}
 \pretitle{\begin{center}
-\includegraphics[width=2in,height=2in]{logos/UoNTransparent.png}\LARGE\\}
+\includegraphics[width=1.8837in,height=0.7in]{logos/UoNTransparent.png}\LARGE\\}
 \posttitle{\end{center}}
 
 \usepackage{booktabs}
@@ -34,6 +34,15 @@
 
 \usepackage{tikz}
 \usetikzlibrary{arrows}
+
+\usepackage{etoolbox}
+      \newcounter{sectioncounter}
+      \setcounter{sectioncounter}{0}  % 0
+
+      \pretocmd{\section}{
+        \ifnum\value{sectioncounter}>0 \newpage\fi
+        \stepcounter{sectioncounter}  % Increment counter
+      }{}{}
 
 % ----------------------------------------------------------------------
 %           User Created Environments
