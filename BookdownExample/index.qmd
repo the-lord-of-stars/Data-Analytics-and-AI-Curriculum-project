@@ -1,5 +1,4 @@
 ---
-author: "Lisa Mott & Tom Wicks"
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: true

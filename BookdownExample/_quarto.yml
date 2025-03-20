@@ -4,6 +4,7 @@ project:
 
 book:
   title: "R Bookdown Template"
+  author: "Lisa Mott & Tom Wicks"
   chapters:
     - index.qmd
     - 02-Part2.qmd
