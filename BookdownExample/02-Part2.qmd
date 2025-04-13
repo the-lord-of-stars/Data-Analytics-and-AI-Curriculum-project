@@ -120,7 +120,8 @@ yields: Consider the equation $y = mx+c$.
 :::
 
 #### Display Mathematics {-}
-Display mathematics (unnumbered) is delimited using either `$$...$$`, `\[...\]` or `\begin{equation*}...\end{equation*}`.
+Display mathematics (unnumbered) is delimited using either `$$...$$`, `\[...\]` or
+`\begin{equation*}...\end{equation*}`.
 
 ::: {.example name="Display Mathematics"}
 ```{md eval=FALSE}
@@ -304,7 +305,8 @@ This is the easier approach but the alt text is not as nice (we have cheated and
 This is a slightly more difficult approach and requires the use of R, but it is better for "hiding" the alternative text.
 
 ````{md}
-```{r, echo=FALSE, out.width="600px", fig.alt="Here is the alt text", fig.cap="Here is the image caption."}
+```{r, echo=FALSE, out.width="600px", fig.alt="Here is the alt text",
+    fig.cap="Here is the image caption."}
     knitr::include_graphics("workers.png")
 ```
 ````
