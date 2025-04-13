@@ -5,12 +5,19 @@ project:
 book:
   title: "Quarto Template"
   author: "SACA Group"
+  repo-url: https://github.com/the-lord-of-stars/Data-Analytics-and-AI-Curriculum-project/
+  repo-actions: [edit, issue, source]
+  page-navigation: true
+  sidebar:
+      logo: logos/UoNTransparent.png
+      search: true
   chapters:
     - index.qmd
     - 02-Part2.qmd
     - 03-Part3.qmd
     - 04-Part4.qmd
   downloads: [pdf]
+  reader-mode: true
   
 
 language:
@@ -27,8 +34,6 @@ format:
   html:
     css: [style.css]
     toc: true
-    margin-header: |
-      ![](/logos/UoNTransparent.png)
     theme:
       light: theme/light.scss
       dark: theme/dark.scss
