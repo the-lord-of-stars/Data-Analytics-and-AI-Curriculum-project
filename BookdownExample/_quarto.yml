@@ -20,12 +20,12 @@ language:
 execute:
   freeze: auto
 
-bibliography: [book.bib, packages.bib]
+bibliography: [bib/book.bib, bib/packages.bib]
 
 
 format:
   html:
-    css: style.css
+    css: [style.css]
     toc: true
     margin-header: |
       ![](/logos/UoNTransparent.png)
@@ -39,7 +39,7 @@ format:
     number-sections: true
     number-depth: 3
     documentclass: article
-    include-in-header: preamble.tex
+    include-in-header: [tex/preamble.tex]
     pdf-engine: pdflatex
     citation-package: natbib
     keep-tex: true
