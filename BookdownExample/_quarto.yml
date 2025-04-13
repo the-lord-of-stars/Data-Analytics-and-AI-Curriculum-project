@@ -3,8 +3,8 @@ project:
   output-dir: _book
 
 book:
-  title: "R Bookdown Template"
-  author: "Lisa Mott & Tom Wicks"
+  title: "Quarto Template"
+  author: "SACA Group"
   chapters:
     - index.qmd
     - 02-Part2.qmd
@@ -20,6 +20,7 @@ language:
 execute:
   freeze: auto
 
+bibliography: [book.bib, packages.bib]
 
 
 format:

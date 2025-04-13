@@ -1,7 +1,4 @@
 ---
-bibliography: [book.bib, packages.bib]
-biblio-style: apalike
-link-citations: true
 description: "This is the notes for your_module_name"
 ---
 
