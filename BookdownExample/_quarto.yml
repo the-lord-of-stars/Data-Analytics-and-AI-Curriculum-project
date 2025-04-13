@@ -21,12 +21,17 @@ execute:
   freeze: auto
 
 
+
 format:
   html:
     css: style.css
     toc: true
     margin-header: |
-     ![](/logos/UoNTransparent.png)
+      ![](/logos/UoNTransparent.png)
+    theme:
+      light: theme/light.scss
+      dark: theme/dark.scss
+    
   pdf:
     toc: true
     shift-heading-level-by: 1

@@ -1,0 +1,33 @@
+/*-- scss:defaults --*/
+
+// colors (Light theme)
+$body-bg: #ffffff !default;
+$body-color: #000 !default;
+$link-color: #51483d !default;
+$selection-bg: #26351c !default;
+
+// headings
+$presentation-heading-color: #383d3d !default;
+
+/*-- scss:rules --*/
+
+body {
+  background-color: $body-bg;
+  color: $body-color;
+}
+
+a {
+  color: $link-color;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+::selection {
+  background-color: $selection-bg;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $presentation-heading-color;
+}
