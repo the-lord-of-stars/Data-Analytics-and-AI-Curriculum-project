@@ -46,7 +46,7 @@ format:
     lof: true
     lot: true
     documentclass: article
-    include-in-header: [tex/preamble.tex]
+    include-in-header: [preamble.tex]
     pdf-engine: pdflatex
     citation-package: natbib
     keep-tex: true
