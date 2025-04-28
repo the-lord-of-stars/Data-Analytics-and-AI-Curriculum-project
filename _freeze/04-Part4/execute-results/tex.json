@@ -1,0 +1,21 @@
+{
+  "hash": "33824356df69e1a74b0bdebf08d0c5f4",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Adding colour\n\nThis is an advanced feature for bookdown and is not suitable for beginners.\n\nIt is quite easy to use HTML to add <span style=\"color:blue\">colour to text.</span> However when you change the theme to night you will not be able to see the colour.\n\n[Steve Wang](https://www.nottingham.ac.uk/biosciences/people/qingqi.wang) has provided a solution that uses HTML and R to use colours that change in the three different themes.\n\nIn this template we have set three default colour schemes that are accessible in all of the three themes. \n\nIf you would like to change the colour of some text you can do by creating the following formula in R. The class myhl is defined in the style file.\n\n\n\n\n\n\n::: {.cell}\n\n:::\n\n\n\n\n\n\nThe below function is so you can see the output of the above function and can be deleted.\n\n\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\ncolorize<-function(x,color){\n  if (knitr::is_latex_output()) {\n    sprintf(\"\\\\textcolor{%s}{%s}\",color,x)\n  } else if (knitr::is_html_output()){\n    sprintf(\"<span class='myhl'>%s</span>\" ,x)\n  } else x\n}\n```\n:::\n\n\n\n\n\n\nWe can them add \\textcolor{blue}{some words in blue.} You may want to see what happens when you change the theme to night in the output.\n\nWe can then define another colour using the following\n\n\n\n\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\ncolorize2<-function(x,color){\n  if (knitr::is_latex_output()) {\n    sprintf(\"\\\\textcolor{%s}{%s}\",color,x)\n  } else if (knitr::is_html_output()){\n    sprintf(\"<span class='myhl2'>%s</span>\" ,x)\n  } else x\n}\n```\n:::\n\n\n\n\n\n\nHere is some text using the \\textcolor{red}{red theme}\n\n\n\n\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\ncolorize3<-function(x,color){\n  if (knitr::is_latex_output()) {\n    sprintf(\"\\\\textcolor{%s}{%s}\",color,x)\n  } else if (knitr::is_html_output()){\n    sprintf(\"<span class='myhl3'>%s</span>\" ,x)\n  } else x\n}\n```\n:::\n\n\n\n\n\n\nFinally here is some text using the \\textcolor{green}{final colour scheme.}\n\n## Adding colour to maths output\n\nThis is even more complicated and uses the style file. We have set three default colours for blue, red and green that meet accessibility requirements in the three different themes.\n\n$$\ng(\\color{blue}{x-1}) = 3(\\color{red}{x-1}) + 1 = \\color{green}{3x} - 3 + 1 = 3x-2.\n$$\n\n\n## New box types\n\nWe have added some new box types to the template.\n\n:::mistake\n\nWatch out for this common mistake!\n:::\n\n\n:::keypoint\nHere is a key point.\n:::\n",
+    "supporting": [
+      "04-Part4_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {
+      "knitr": [
+        "{\"type\":\"list\",\"attributes\":{},\"value\":[]}"
+      ]
+    },
+    "preserve": null,
+    "postProcess": false
+  }
+}
