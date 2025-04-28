@@ -39,15 +39,14 @@ format:
       dark: theme/dark.scss
     
   pdf:
-    toc: true
-    shift-heading-level-by: 1
-    number-sections: true
     number-depth: 3
+    documentclass: book
     lof: true
     lot: true
-    documentclass: article
+    classoption: oneside
     include-in-header: [preamble.tex]
     pdf-engine: pdflatex
     citation-package: natbib
     keep-tex: true
+
 

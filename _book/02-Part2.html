@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-7dc190fa7113f6386bff8d06c34314ff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-c1478b4c4981fb2a6ad4c6caf00c4c4e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark-0c418812df6cb8baa8fb6a7b546b9f71.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
@@ -397,18 +397,16 @@ window.Quarto = {
 <p>Enter a numbered equation in the usual way using <code>\begin{equation}...\end{equation}</code>. Whilst the equation environment follows conventional LaTeX syntax, R Bookdown does not support <code>\label</code>, <code>\eqref</code> to tag and reference equations. See the example below for how to tag and reference an equation in R Bookdown.</p>
 <div id="EqRef" class="example" name="Numbered Equation">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>\begin{equation} </span>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  (<span class="sc">\#</span>eq:binom)</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>\end{equation} </span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>Consider the Binomial Theorem \@ref(eq:binom).</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>$$ {#eq-binom}</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>Consider the Binomial Theorem @eq-binom.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><span class="math display">\[\begin{equation}
-  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
-  (\#eq:binom)
-\end{equation}\]</span></p>
-<p>Consider the Binomial Theorem @ref(eq:binom).</p>
+<p><span id="eq-binom"><span class="math display">\[
+f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
+\tag{2.1}\]</span></span></p>
+<p>Consider the Binomial Theorem <a href="#eq-binom" class="quarto-xref">Equation&nbsp;<span>2.1</span></a>.</p>
 </div>
 <div class="tip">
 <p>Do not use underscores (“_“) in your labels for cross referencing equations, or any other parts (e.g.&nbsp;tables, theorems, etc. which are discussed in later sections). If you have a label with multiple words, either just write them all in lower case, or use camel case, e.g.&nbsp;<code>#PythThm</code> instead of <code>#pyth_thm</code>.</p>
@@ -701,19 +699,20 @@ g(X_{n}) &amp;= g(\theta)+g'({\tilde{\theta}})(X_{n}-\theta) (\#eq:align1) \\
 <h4 class="unnumbered anchored" data-anchor-id="cross-referencing-environments">Cross Referencing Environments</h4>
 <p>Numbered environments are cross referenced in a similar way to equations (see <a href="#mathematics">Section 2.3</a>).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>::: {.theorem #pyth name="Pythagoras' Theorem"}</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>For a right triangle, if $c$ denotes the length of the hypotenuse</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>and $a$ and $b$ denote the lengths of the other two sides, we have</span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>$$a^2 + b^2 = c^2$$</span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>We use Pythagoras' Theorem \@ref(thm:pyth) to find the length of the missing side.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>::: {.theorem #thm-pyth name="Pythagoras' Theorem"}</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>&lt;br&gt;</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>For a right-angled triangle, if $c$ denotes the length of the hypotenuse</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>and $a$ and $b$ denote the lengths of the other two sides, we have</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>$$a^2 + b^2 = c^2.$$</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>We use Pythagoras' Theorem @thm-pyth to find the length of the missing side.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="pyth" class="theorem" name="Pythagoras' Theorem">
-<p><br> For a right-angled triangle, if <span class="math inline">\(c\)</span> denotes the length of the hypotenuse and <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> denote the lengths of the other two sides, we have <span class="math display">\[a^2 + b^2 = c^2.\]</span></p>
+<div id="thm-pyth" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 2.1 (Pythagoras’ Theorem)</strong></span> <br> For a right-angled triangle, if <span class="math inline">\(c\)</span> denotes the length of the hypotenuse and <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> denote the lengths of the other two sides, we have <span class="math display">\[a^2 + b^2 = c^2.\]</span></p>
 </div>
-<p>We use Pythagoras’ Theorem @ref(thm:pyth) to find the length of the missing side.</p>
-<p>The syntax for referencing environments is <code>\@ref(&lt;prefix&gt;:&lt;label&gt;)</code>. Refer to Table @ref(tab:num-envs) for the prefix corresponding to each environment type.</p>
+<p>We use Pythagoras’ Theorem <a href="#thm-pyth" class="quarto-xref">Theorem&nbsp;<span>2.1</span></a> to find the length of the missing side.</p>
+<p>The syntax for referencing environments is <code>@ref(&lt;prefix&gt;-&lt;label&gt;)</code>. Refer to Table @ref(tab:num-envs) for the prefix corresponding to each environment type.</p>
 <div class="note">
 <p>The prefix for a table reference is <code>tab</code>.</p>
 </div>

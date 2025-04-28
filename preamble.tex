@@ -35,14 +35,6 @@
 \usepackage{tikz}
 \usetikzlibrary{arrows}
 
-\usepackage{etoolbox}
-      \newcounter{sectioncounter}
-      \setcounter{sectioncounter}{0}  % 0
-
-      \pretocmd{\section}{
-        \ifnum\value{sectioncounter}>0 \newpage\fi
-        \stepcounter{sectioncounter}  % Increment counter
-      }{}{}
 
 % ----------------------------------------------------------------------
 %           User Created Environments
@@ -75,3 +67,4 @@
 \newtheorem*{keypoint}{Key point}
 %%%-----Notation-----%%%
 \newtheorem*{notation}{Notation}
+

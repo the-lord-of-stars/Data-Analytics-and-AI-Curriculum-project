@@ -22,63 +22,7 @@ pre code {
 
 .dropdown-menu .buttons .button:hover{color:#0099fe}
 
-/*
-*Theme 1 changes (Sepia)
-*/
-.book.color-theme-1 .book-header .btn {
-  color: #73553c;
-}
-.book.color-theme-1 .book-header .btn:hover {
-  color: #453326;
-  background: none;
-}
-.book.color-theme-1 .dropdown-menu .button {
-  color: #A79E90;
-}
-.book.color-theme-1 .dropdown-menu .button:hover {
-  color: #E1964C;
-}
-.book.color-theme-1 .book-summary {
-  color: #A79E90;
-  background: #111111;
-  border-right: 1px solid rgba(0, 0, 0, 0.07);
-}
-.book.color-theme-1 .book-summary ul.summary li.done > a {
-  color: #A79E90;
-}
-.book.color-theme-1 .book-summary ul.summary li a,
-.book.color-theme-1 .book-summary ul.summary li span {
-  color: #A79E90;
-  background: transparent;
-  font-weight: normal;
-}
-.book.color-theme-1 .book-summary ul.summary li.active > a,
-.book.color-theme-1 .book-summary ul.summary li a:hover {
-  color: #E1964C;
-  background: transparent;
-  font-weight: normal;
-}
-.book.color-theme-1 .book-body p.caption{
-  color: #704214;
-}
 
-/*
-*Theme 2 changes (Night)
-*/
-.book.color-theme-2 .book-header .btn {
-  color: #A8AAC2;
-}
-.book.color-theme-2 .dropdown-menu .button {
-  color: #c1c6d7;
-}
-.book.color-theme-2 .dropdown-menu .button:hover {
-  color: #f4f4f5;
-  background: #252737;
-  font-weight: 600;
-}
-.book.color-theme-2 .book-body p.caption{
-  color: #a8b4c4;
-}
 
 /* Simplify formatting of navbar link */
 .book .book-header h1 {

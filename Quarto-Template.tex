@@ -1,11 +1,10 @@
 % Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
-\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 %
 \documentclass[
   letterpaper,
-]{article}
+  oneside]{book}
 
 \usepackage{amsmath,amssymb}
 \usepackage{iftex}
@@ -170,14 +169,6 @@
 \usepackage{tikz}
 \usetikzlibrary{arrows}
 
-\usepackage{etoolbox}
-      \newcounter{sectioncounter}
-      \setcounter{sectioncounter}{0}  % 0
-
-      \pretocmd{\section}{
-        \ifnum\value{sectioncounter}>0 \newpage\fi
-        \stepcounter{sectioncounter}  % Increment counter
-      }{}{}
 
 % ----------------------------------------------------------------------
 %           User Created Environments
@@ -210,6 +201,7 @@
 \newtheorem*{keypoint}{Key point}
 %%%-----Notation-----%%%
 \newtheorem*{notation}{Notation}
+
 \makeatletter
 \@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
 \makeatother
@@ -247,6 +239,15 @@
 \@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
 \floatname{codelisting}{Listing}
 \newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\usepackage{amsthm}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[chapter]
+\theoremstyle{remark}
+\AtBeginDocument{\renewcommand*{\proofname}{Proof}}
+\newtheorem*{remark}{Remark}
+\newtheorem*{solution}{Solution}
+\newtheorem{refremark}{Remark}[chapter]
+\newtheorem{refsolution}{Solution}[chapter]
 \makeatother
 \makeatletter
 \makeatother
@@ -262,11 +263,7 @@
 \hypersetup{
   pdftitle={Quarto Template},
   pdfauthor={SACA Group},
-  colorlinks=true,
-  linkcolor={blue},
-  filecolor={Maroon},
-  citecolor={Blue},
-  urlcolor={Blue},
+  hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
 
@@ -275,26 +272,25 @@
 \date{}
 
 \begin{document}
+\frontmatter
 \maketitle
 
 \renewcommand*\contentsname{Table of contents}
 {
-\hypersetup{linkcolor=}
 \setcounter{tocdepth}{2}
 \tableofcontents
 }
-\listoffigures
-\listoftables
 
+\mainmatter
 \bookmarksetup{startatroot}
 
-\section{Introduction to R Bookdown}\label{introduction-to-r-bookdown}
+\chapter{Introduction to R Bookdown}\label{introduction-to-r-bookdown}
 
 This is a template to create notes in R bookdown. For more information
 on R bookdown please see
 \href{https://bookdown.org/yihui/bookdown/?target=_blank}{this website.}
 
-\subsection{R Bookdown Installation}\label{r-bookdown-installation}
+\section{R Bookdown Installation}\label{r-bookdown-installation}
 
 If you do not already have R and RStudio installed on your computer, go
 to the
@@ -302,9 +298,9 @@ to the
 Desktop download page} and follow the instructions to install (1) R and
 (2) RStudio.
 
-\subsubsection*{Use RStudio to install R
+\subsection*{Use RStudio to install R
 Bookdown}\label{use-rstudio-to-install-r-bookdown}
-\addcontentsline{toc}{subsubsection}{Use RStudio to install R Bookdown}
+\addcontentsline{toc}{subsection}{Use RStudio to install R Bookdown}
 
 Open RStudio. In the console (box on the left-hand side in the default
 view), type
@@ -315,7 +311,7 @@ view), type
 \end{Highlighting}
 \end{Shaded}
 
-\subsection{Compile a Book}\label{compile-a-book}
+\section{Compile a Book}\label{compile-a-book}
 
 Follow the steps below to download and compile the source code for this
 template in R Bookdown.
@@ -357,8 +353,7 @@ Instructions for unzipping files:
   browser.
 \end{enumerate}
 
-\subsection{Upload Your Book to
-Moodle}\label{upload-your-book-to-moodle}
+\section{Upload Your Book to Moodle}\label{upload-your-book-to-moodle}
 
 Please watch the video guide below.
 
@@ -374,7 +369,7 @@ click here.}
 
 \bookmarksetup{startatroot}
 
-\section{Some R Bookdown Features}\label{some-r-bookdown-features}
+\chapter{Some R Bookdown Features}\label{some-r-bookdown-features}
 
 In this section, we describe the basic use of R Bookdown and introduce
 some of the more advanced features/customisation. What we present here
@@ -399,7 +394,7 @@ others.
   can ask and discuss questions.
 \end{itemize}
 
-\subsection{Bookdown File Structure}\label{bookdown-file-structure}
+\section{Bookdown File Structure}\label{bookdown-file-structure}
 
 There are a number of files that make up the R Bookdown structure, but
 you'll be glad to know that you can ignore most of them. The ones you
@@ -448,7 +443,7 @@ this is not recommended as your file could get very big!
   \end{itemize}
 \end{itemize}
 
-\subsection{Markdown Basics}\label{markdown-basics}
+\section{Markdown Basics}\label{markdown-basics}
 
 If you're completely new to R Markdown, the
 \href{https://rmarkdown.rstudio.com/authoring_basics.html?target=_blank}{Markdown
@@ -456,10 +451,10 @@ Basics} guide provides an excellent overview of the most common syntax.
 Most of it is very straightforward and intuitive, but will take some
 getting used to if you are accustomed to LaTeX.
 
-\subsubsection{Examples}\label{examples}
+\subsection{Examples}\label{examples}
 
-\paragraph*{Emphasis}\label{emphasis}
-\addcontentsline{toc}{paragraph}{Emphasis}
+\subsubsection*{Emphasis}\label{emphasis}
+\addcontentsline{toc}{subsubsection}{Emphasis}
 
 \textbf{Emphasise parts of text} using \texttt{**bold**} or
 \texttt{\_\_bold\_\_}.
@@ -467,8 +462,8 @@ getting used to if you are accustomed to LaTeX.
 You can use \texttt{*italic*} or \texttt{\_italic\_} for \emph{italic
 text}, but it is best to avoid this when creating accessible documents.
 
-\paragraph*{Headings}\label{headings}
-\addcontentsline{toc}{paragraph}{Headings}
+\subsubsection*{Headings}\label{headings}
+\addcontentsline{toc}{subsubsection}{Headings}
 
 Use the syntax
 
@@ -487,8 +482,8 @@ for headings, subheadings, etc. R Bookdown will automatically number
 your headings. To suppress the heading number, add \texttt{\{-\}} at the
 end of your heading, e.g.~\texttt{\#\#\ Unnumbered\ Subheading\ \{-\}}.
 
-\paragraph*{Links and References}\label{links-and-references}
-\addcontentsline{toc}{paragraph}{Links and References}
+\subsubsection*{Links and References}\label{links-and-references}
+\addcontentsline{toc}{subsubsection}{Links and References}
 
 Add a link to a url using the syntax
 \texttt{{[}link\ text{]}(link\ url)}.
@@ -514,8 +509,8 @@ to Moodle}.
 
 We recommend suppressing numbers from Heading 4 onwards.
 
-\paragraph*{Lists}\label{lists}
-\addcontentsline{toc}{paragraph}{Lists}
+\subsubsection*{Lists}\label{lists}
+\addcontentsline{toc}{subsubsection}{Lists}
 
 Create unordered lists using the syntax
 
@@ -575,12 +570,12 @@ Similarly, an ordered list can be created using the syntax
   \end{enumerate}
 \end{enumerate}
 
-\subsection{Mathematics}\label{mathematics}
+\section{Mathematics}\label{mathematics}
 
 Mathematics can be entered using familiar LaTeX commands and delimiters.
 
-\paragraph*{Inline Mathematics}\label{inline-mathematics}
-\addcontentsline{toc}{paragraph}{Inline Mathematics}
+\subsubsection*{Inline Mathematics}\label{inline-mathematics}
+\addcontentsline{toc}{subsubsection}{Inline Mathematics}
 
 Inline mathematics is delimited using either \texttt{\$...\$} or
 \texttt{\textbackslash{}(...\textbackslash{})}.
@@ -595,8 +590,8 @@ The syntax
 
 yields: Consider the equation \(y = mx+c\).
 
-\paragraph*{Display Mathematics}\label{display-mathematics}
-\addcontentsline{toc}{paragraph}{Display Mathematics}
+\subsubsection*{Display Mathematics}\label{display-mathematics}
+\addcontentsline{toc}{subsubsection}{Display Mathematics}
 
 Display mathematics (unnumbered) is delimited using either
 \texttt{\$\$...\$\$}, \texttt{\textbackslash{}{[}...\textbackslash{}{]}}
@@ -617,8 +612,8 @@ yields:
  \int_0^\infty e^{-x^2}\,\mathrm{d}x = \frac{\sqrt{\pi}}{2}. 
 \]
 
-\paragraph*{Numbered Equation}\label{numbered-equation}
-\addcontentsline{toc}{paragraph}{Numbered Equation}
+\subsubsection*{Numbered Equation}\label{numbered-equation}
+\addcontentsline{toc}{subsubsection}{Numbered Equation}
 
 Enter a numbered equation in the usual way using
 \texttt{\textbackslash{}begin\{equation\}...\textbackslash{}end\{equation\}}.
@@ -630,21 +625,19 @@ example below for how to tag and reference an equation in R Bookdown.
 \phantomsection\label{EqRef}
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{\textbackslash{}begin\{equation\} }
+\NormalTok{$$}
 \NormalTok{  f\textbackslash{}left(k\textbackslash{}right) = \textbackslash{}binom\{n\}\{k\} p\^{}k\textbackslash{}left(1{-}p\textbackslash{}right)\^{}\{n{-}k\}}
-\NormalTok{  (}\SpecialCharTok{\textbackslash{}\#}\NormalTok{eq:binom)}
-\NormalTok{\textbackslash{}end\{equation\} }
+\NormalTok{$$ \{\#eq{-}binom\}}
     
-\NormalTok{Consider the Binomial Theorem \textbackslash{}@ref(eq:binom).}
+\NormalTok{Consider the Binomial Theorem @eq{-}binom.}
 \end{Highlighting}
 \end{Shaded}
 
-\begin{equation} 
-  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
-  (\#eq:binom)
-\end{equation}
+\begin{equation}\phantomsection\label{eq-binom}{
+f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
+}\end{equation}
 
-Consider the Binomial Theorem @ref(eq:binom).
+Consider the Binomial Theorem Equation~\ref{eq-binom}.
 
 Do not use underscores (``\_``) in your labels for cross referencing
 equations, or any other parts (e.g.~tables, theorems, etc. which are
@@ -656,8 +649,8 @@ Underscores are special characters in Markdown that are used to delimit
 italic text (see \hyperref[markdown-basics]{Markdown Basics}), so using
 this character in labels causes a conflict.
 
-\paragraph*{User-Defined Commands}\label{user-defined-commands}
-\addcontentsline{toc}{paragraph}{User-Defined Commands}
+\subsubsection*{User-Defined Commands}\label{user-defined-commands}
+\addcontentsline{toc}{subsubsection}{User-Defined Commands}
 
 You may be the sort of person who likes writing your own LaTeX commands
 to save some typing. You can add custom commands anywhere in a
@@ -698,9 +691,9 @@ Consider the differential equation \[
 \frac{\mathrm{d}^2 y}{\mathrm{d}x}+3\frac{\mathrm{d}y}{\mathrm{d}x}-y=0.
 \]
 
-\paragraph*{Multiple and Multiline
+\subsubsection*{Multiple and Multiline
 Equations}\label{multiple-and-multiline-equations}
-\addcontentsline{toc}{paragraph}{Multiple and Multiline Equations}
+\addcontentsline{toc}{subsubsection}{Multiple and Multiline Equations}
 
 R Bookdown interprets the \texttt{align} environment in the usual way.
 You can tag each line individually to refer back to specific equations.
@@ -776,7 +769,7 @@ that all lines in a multiline equation share the same number.
 See @ref(eq:var-beta) for the calculation of
 \(\mathrm{Var}(\hat{\beta})\).
 
-\subsection{Tables}\label{tables}
+\section{Tables}\label{tables}
 
 Here is a basic table.
 
@@ -811,7 +804,7 @@ many good Markdown/HTML table generators online.
 \href{https://www.tablesgenerator.com/html_tables?target=_blank}{I use
 this one}, but others are available.
 
-\subsection{Images}\label{images}
+\section{Images}\label{images}
 
 We look at two approaches for adding the same image. We add
 \textbf{alternative text (usually referred to as ``alt text'')} in both
@@ -821,8 +814,8 @@ The files must either be in the same directory as your \texttt{.Rmd}
 file(s), or you need to specify the path to the subfolder containing
 your image file.
 
-\paragraph*{Approach 1 (Markdown)}\label{approach-1-markdown}
-\addcontentsline{toc}{paragraph}{Approach 1 (Markdown)}
+\subsubsection*{Approach 1 (Markdown)}\label{approach-1-markdown}
+\addcontentsline{toc}{subsubsection}{Approach 1 (Markdown)}
 
 This is the easier approach but the alt text is not as nice (we have
 cheated and written it as a caption).
@@ -841,8 +834,8 @@ cheated and written it as a caption).
 
 \end{figure}%
 
-\paragraph*{Approach 2 (R)}\label{approach-2-r}
-\addcontentsline{toc}{paragraph}{Approach 2 (R)}
+\subsubsection*{Approach 2 (R)}\label{approach-2-r}
+\addcontentsline{toc}{subsubsection}{Approach 2 (R)}
 
 This is a slightly more difficult approach and requires the use of R,
 but it is better for ``hiding'' the alternative text.
@@ -874,7 +867,7 @@ This is the preferred approach since we can distinguish between image
 captions and alt text. Also, we benefit from R's automatic numbering of
 figures in their captions.
 
-\subsubsection{Generating Images Using R (or
+\subsection{Generating Images Using R (or
 Python)}\label{generating-images-using-r-or-python}
 
 Press Ctrl+Alt+I to add R code. This adds the chunk below and you can
@@ -927,12 +920,12 @@ Here, the code is shown but the graph is not shown using eval=FALSE.
 \end{Highlighting}
 \end{Shaded}
 
-\subsection{Environments}\label{environments}
+\section{Environments}\label{environments}
 
 R Bookdown has several built-in environments, such as Theorem, Example,
 etc to help organise your notes.
 
-\subsubsection{Numbered Environments}\label{numbered-environments}
+\subsection{Numbered Environments}\label{numbered-environments}
 
 The following environments have an automatic numbering system and so can
 be cross-referenced.
@@ -987,41 +980,46 @@ If you do not wish to name your example, then write
 The \texttt{\textless{}br\textgreater{}} tag is used to start the
 example text on a new line.
 
-\paragraph*{Cross Referencing
+\subsubsection*{Cross Referencing
 Environments}\label{cross-referencing-environments}
-\addcontentsline{toc}{paragraph}{Cross Referencing Environments}
+\addcontentsline{toc}{subsubsection}{Cross Referencing Environments}
 
 Numbered environments are cross referenced in a similar way to equations
 (see \hyperref[mathematics]{Section 2.3}).
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{::: \{.theorem \#pyth name="Pythagoras\textquotesingle{} Theorem"\}}
-\NormalTok{For a right triangle, if $c$ denotes the length of the hypotenuse}
+\NormalTok{::: \{.theorem \#thm{-}pyth name="Pythagoras\textquotesingle{} Theorem"\}}
+\NormalTok{\textless{}br\textgreater{}}
+\NormalTok{For a right{-}angled triangle, if $c$ denotes the length of the hypotenuse}
 \NormalTok{and $a$ and $b$ denote the lengths of the other two sides, we have}
-\NormalTok{$$a\^{}2 + b\^{}2 = c\^{}2$$}
+\NormalTok{$$a\^{}2 + b\^{}2 = c\^{}2.$$}
 \NormalTok{:::}
   
-\NormalTok{We use Pythagoras\textquotesingle{} Theorem \textbackslash{}@ref(thm:pyth) to find the length of the missing side.}
+\NormalTok{We use Pythagoras\textquotesingle{} Theorem @thm{-}pyth to find the length of the missing side.}
 \end{Highlighting}
 \end{Shaded}
 
-\phantomsection\label{pyth}
+\begin{theorem}[Pythagoras'
+Theorem]\protect\hypertarget{thm-pyth}{}\label{thm-pyth}
+
 For a right-angled triangle, if \(c\) denotes the length of the
 hypotenuse and \(a\) and \(b\) denote the lengths of the other two
 sides, we have \[a^2 + b^2 = c^2.\]
 
-We use Pythagoras' Theorem @ref(thm:pyth) to find the length of the
-missing side.
+\end{theorem}
+
+We use Pythagoras' Theorem Theorem~\ref{thm-pyth} to find the length of
+the missing side.
 
 The syntax for referencing environments is
-\texttt{\textbackslash{}@ref(\textless{}prefix\textgreater{}:\textless{}label\textgreater{})}.
+\texttt{@ref(\textless{}prefix\textgreater{}-\textless{}label\textgreater{})}.
 Refer to Table @ref(tab:num-envs) for the prefix corresponding to each
 environment type.
 
 The prefix for a table reference is \texttt{tab}.
 
-\subsubsection{Unnumbered Environments}\label{unnumbered-environments}
+\subsection{Unnumbered Environments}\label{unnumbered-environments}
 
 \begin{longtable}[]{@{}ll@{}}
 \caption{(\#tab:oth-envs) Other Environments in R
@@ -1058,14 +1056,14 @@ change/update.
 
 \bookmarksetup{startatroot}
 
-\section{Interactivity}\label{interactivity}
+\chapter{Interactivity}\label{interactivity}
 
 The great thing with using HTML is that you can make your notes as
 interactive as you like. This section shows you a few ways of
 introducing interactivity to your notes, but the possibilities are
 endless.
 
-\subsection{Reveal Hidden Text}\label{reveal-hidden-text}
+\section{Reveal Hidden Text}\label{reveal-hidden-text}
 
 You can hide and unhide some text (e.g.~hints or optional solutions) as
 in the following example.
@@ -1107,7 +1105,7 @@ This is the text/image etc. that I want to hide.
 
 \end{figure}%
 
-\subsection{Embedded Video}\label{embedded-video}
+\section{Embedded Video}\label{embedded-video}
 
 Please watch the video below to see how we have embedded this video from
 mediaspace.
@@ -1130,9 +1128,9 @@ work then please use
 \href{https://mediaspace.nottingham.ac.uk/media/How+to+use+the+template/1_brjfqb44}{this
 alternative link.}
 
-\subsection{Quizzes}\label{quizzes}
+\section{Quizzes}\label{quizzes}
 
-\subsubsection{Xerte}\label{xerte}
+\subsection{Xerte}\label{xerte}
 
 For Xerte, just paste the embed code. Example below. Note, if you have
 your settings on Xerte so that the file can only be viewed from Moodle,
@@ -1143,18 +1141,18 @@ If the interactive slides above do not work then please access them
 using \href{https://www.nottingham.ac.uk/toolkits/play_25775}{this
 link.}
 
-\subsubsection{Itempool}\label{itempool}
+\subsection{Itempool}\label{itempool}
 
 Here we use r commands to add in a URL.
 
-\subsubsection{Microsoft Forms}\label{microsoft-forms}
+\subsection{Microsoft Forms}\label{microsoft-forms}
 
 This one has been used by copying and pasting the embed code from the
 microsoft form share settings.
 
 \bookmarksetup{startatroot}
 
-\section{Adding colour}\label{adding-colour}
+\chapter{Adding colour}\label{adding-colour}
 
 This is an advanced feature for bookdown and is not suitable for
 beginners.
@@ -1222,7 +1220,7 @@ Here is some text using the \textcolor{red}{red theme}
 Finally here is some text using the
 \textcolor{green}{final colour scheme.}
 
-\subsection{Adding colour to maths
+\section{Adding colour to maths
 output}\label{adding-colour-to-maths-output}
 
 This is even more complicated and uses the style file. We have set three
@@ -1233,7 +1231,7 @@ requirements in the three different themes.
 g(\color{blue}{x-1}) = 3(\color{red}{x-1}) + 1 = \color{green}{3x} - 3 + 1 = 3x-2.
 \]
 
-\subsection{New box types}\label{new-box-types}
+\section{New box types}\label{new-box-types}
 
 We have added some new box types to the template.
 
@@ -1242,6 +1240,7 @@ Watch out for this common mistake!
 Here is a key point.
 
 
+\backmatter
 
 
 \end{document}
