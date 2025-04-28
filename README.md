@@ -7,17 +7,14 @@ To get started with this project, follow these steps:
 1. **Clone the Repository**
    ```bash
    git clone https://github.com/yourusername/Data-Analytics-and-AI-Curriculum-project.git
-   cd Data-Analytics-and-AI-Curriculum-project
    ```
    
 2. **Render the book**
    ```bash
-   cd BookdownExample
    quarto render
    ```
-3. **Open the book**
+3. **Open the website**
    ```bash
-   cd BookdownExample
    quarto preview
    ```
 ## Resources
