@@ -39,7 +39,9 @@ format:
     theme:
       light: theme/light.scss
       dark: theme/dark.scss
-    
+    link-external-newwindow: true
+
+
   pdf:
     number-depth: 3
     documentclass: book
