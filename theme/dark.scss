@@ -47,7 +47,7 @@ $danger:        $red !default;
 // This is inconsistent with Bootstrap semantics. That is, $dark
 // should actually be a light color in a dark mode setting, :shrug:
 // https://github.com/thomaspark/bootswatch/issues/989
-$light:         body-mix(65%) !default;
+$light:         body-mix(50%) !default;
 $dark:          body-mix(95%) !default;
 
 $min-contrast-ratio:   1.9 !default;
