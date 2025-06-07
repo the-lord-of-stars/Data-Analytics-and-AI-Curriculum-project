@@ -1,0 +1,413 @@
+# Some Quarto Bookdown Features
+In this section, we describe the basic use of Quarto Bookdown and introduce some of the more advanced features/customisation. What we present here is representative but not exhaustive.
+
+* See [bookdown.org](https://quarto.org/?target=_blank) for lots of useful resources, including the comprehensive [Bookdown Documentation](https://quarto.org/docs/guide/?target=_blank).
+
+* For advanced use of Quarto Bookdown, the [gallery of Quarto templates](https://quarto.org/docs/gallery/?target=_blank) is great.
+
+
+## Bookdown File Structure
+There are a number of files that make up the Quarto Bookdown structure, but you'll be glad to know that you can ignore most of them. The ones you will spend most of your time editing are the ones with the `.qmd` extension.
+
+* `index.qmd` is recognised by Quarto Bookdown as the first chapter of your book. This will also be the homepage of your website.
+
+* The remaining `.qmd` files contain the subsequent sections of your book. Quarto Markdown will read the files in the order that you defined in the `_quarto.yaml`.
+
+:::tip
+If you prefer, you can write your entire book in `index.qmd`, but this is not recommended as your file could get very big!
+:::
+
+* `_quarto.yml` provides some basic metadata about your book, such as the title, author, and date. Additionally, there are plenty of settings you can customise in this file, such as the output format, font size, and layout.
+
+## Markdown Basics
+If you're completely new to Quarto Markdown, the [Markdown Basics](https://quarto.org/docs/authoring/markdown-basics.html) guide provides an excellent overview of the most common syntax. Most of it is very straightforward and intuitive, but will take some getting used to if you are accustomed to LaTeX.
+
+### Examples
+#### Emphasis {-}
+**Emphasise parts of text** using `**bold**` or `__bold__`.
+
+:::note
+You can use `*italic*` or `_italic_` for *italic text*, but it is best to avoid this when creating accessible documents.
+:::
+
+#### Headings {-}
+Use the syntax
+```{md eval=FALSE}
+# Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+```
+for headings, subheadings, etc. Quarto Bookdown will automatically number your headings. To suppress the heading number, add `{-}` at the end of your heading, e.g. `## Unnumbered Subheading {-}`.
+
+#### Links and References {-}
+Add a link to a url using the syntax `[link text](link url)`.
+
+::: {.example name="Website Link"}
+```
+[School of Mathematical Sciences](https://www.nottingham.ac.uk/mathematics/?target=_blank)
+```
+[School of Mathematical Sciences](https://www.nottingham.ac.uk/mathematics/?target=_blank)
+
+Adding `?target=_blank` to the end of the URL forces the link to open in a new tab when clicked.
+:::
+
+::: {.example name="Cross Reference"}
+<br>
+Link to other parts of your book using heading names.
+
+```
+Find out how to make [Links and References][Links and References].
+```
+
+Find out how to make [Links and References][Links and References].
+:::
+
+:::tip
+We recommend suppressing numbers from Heading 4 onwards.
+:::
+
+#### Lists {-}
+Create unordered lists using the syntax
+
+```{md eval=FALSE}
+* Item 1
+* Item 2
+    + Item 2a
+    + Item 2a
+```
+Which produces the output:
+
+* Item 1
+* Item 2
+    + Item 2a
+    + Item 2a
+  
+Similarly, an ordered list can be created using the syntax
+```{md eval=FALSE}
+1. Item 1
+2. Item 2
+    a. Item 2a
+    b. Item 2b
+```
+
+1. Item 1
+2. Item 2
+    a. Item 2a
+    b. Item 2b
+    
+## Mathematics
+Mathematics can be entered using familiar LaTeX commands and delimiters. 
+
+#### Inline Mathematics {-}
+Inline mathematics is delimited using either `$...$`.
+
+::: {.example name="Inline Mathematics"}
+<br>
+The syntax
+
+```{md eval=FALSE}
+Consider the equation $y = mx+c$.
+```
+yields: Consider the equation $y = mx+c$.
+:::
+
+#### Display Mathematics {-}
+Display mathematics (unnumbered) is delimited using either `$$...$$` or
+`\begin{equation}...\end{equation}`.
+
+::: {.example name="Display Mathematics"}
+```{md eval=FALSE}
+$$
+ \int_0^\infty e^{-x^2}\,\mathrm{d}x = \frac{\sqrt{\pi}}{2}. 
+$$
+```
+yields:
+
+$$
+ \int_0^\infty e^{-x^2}\,\mathrm{d}x = \frac{\sqrt{\pi}}{2}. 
+$$
+:::
+
+#### Numbered Equation {-}
+Enter a numbered equation in the usual way using `\begin{equation}...\end{equation}`. Whilst the equation environment follows conventional LaTeX syntax, Quarto Bookdown does not support `\label`, `\eqref` to tag and reference equations. See the example below for how to tag and reference an equation in R Bookdown.
+
+::: {.example name="Numbered Equation"}
+```{md eval=FALSE}
+$$
+  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
+$$ {#eq-binom}
+    
+Consider the Binomial Theorem (@eq-binom).
+
+```
+$$
+f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
+$$ {#eq-binom}
+    
+Consider the Binomial Theorem (@eq-binom).
+:::
+
+:::tip
+Do not use underscores ("_") in your labels for cross referencing equations, or any other parts (e.g. tables, theorems, etc. which are discussed in later sections). If you have a label with multiple words, either just write them all in lower case, or use camel case, e.g. ```#PythThm``` instead of ```#pyth_thm```.
+
+Underscores are special characters in Markdown that are used to delimit italic text (see [Markdown Basics][Markdown Basics]), so using this character in labels causes a conflict.
+:::
+
+#### User-Defined Commands {-}
+You may be the sort of person who likes writing your own LaTeX commands to save some typing. You can add custom commands anywhere in a `.qmd` file and they will work in the expected way, as long as you define the command before its first use in your book.
+
+:::tip
+The best place to define your custom commands is in `index.md` just below Line 16.
+:::
+
+::: {.example name="User-Defined Commands"}
+Defining the following custom commands in `index.md`
+```{latex eval=FALSE}
+\newcommand{\rd}{\mathrm{d}}
+\newcommand{\deriv}[2]{\frac{\rd #1}{\rd #2}}
+\newcommand{\nthderiv}[3]{\frac{\rd^#3 #1}{\rd #2}}
+```
+
+\newcommand{\rd}{\mathrm{d}}
+\newcommand{\deriv}[2]{\frac{\rd #1}{\rd #2}}
+\newcommand{\nthderiv}[3]{\frac{\rd^#3 #1}{\rd #2}}
+
+then writing 
+
+```{md eval=FALSE}
+Consider the differential equation
+$$
+\nthderiv{y}{x}{2}+3\deriv{y}{x}-y=0.
+$$
+```
+yields:
+
+Consider the differential equation
+$$
+\nthderiv{y}{x}{2}+3\deriv{y}{x}-y=0.
+$$
+:::
+
+#### Multiline Equations {-}
+Quarto Bookdown seems to not support the multi-ref environment in one equation.
+
+:::note
+Unfortunately, Quarto Bookdown does not support the `subequations` environment (e.g. for labelling equations 2.2a, 2.2b etc.)
+:::
+
+## Tables
+Here is a basic table.
+
+```{md eval=FALSE}
+|Header 1| Header 2 | Header 3|
+|:------|:-------|:---------|
+|Row 1 | Number | Number|
+|Row 2 | Number | Number|
+```
+
+|Header 1| Header 2 | Header 3|
+|:------|:-------|:---------|
+|Row 1 | Number | Number|
+|Row 2 | Number | Number|
+
+:::tip
+Only very simple tables can be created using Markdown syntax (by design). This is generally a good thing for accessibility, but if you want to create more intricate tables, you can do so using raw HTML inside a `.qmd` file (HTML is interpreted by Quarto Bookdown just as readily as Markdown).
+
+If you get fed up dealing with plain text to make your table, there are many good Markdown/HTML table generators online. [I use this one](https://www.tablesgenerator.com/html_tables?target=_blank), but others are available.
+:::
+
+## Images
+We look at two approaches for adding the same image. We add **alternative text (usually referred to as "alt text")** in both cases. You will see how Quarto Markdown treats them differently.
+
+:::note
+The files must either be in the same directory as your `.qmd` file(s), or you need to specify the path to the subfolder containing your image file.
+:::
+
+#### Approach 1 (Markdown) {-}
+
+This is the easier approach but the alt text is not as nice (we have cheated and written it as a caption).
+
+```
+![Here is the caption](workers.png "alt text")
+```
+
+![Here is the caption text](workers.png "alt text")
+
+#### Approach 2 (R) {-}
+
+This is a slightly more difficult approach and requires the use of R, but it is better for "hiding" the alternative text.
+
+````{md}
+```{r, echo=FALSE, out.width="600px", fig.alt="Here is the alt text",
+    fig.cap="Here is the image caption."}
+    knitr::include_graphics("workers.png")
+```
+````
+
+```{r, echo=FALSE, out.width="600px", fig.alt="Here is the alt text", fig.cap="Here is the image caption."}
+    knitr::include_graphics("workers.png")
+```
+
+The student could view the alt text by right clicking on the image and selecting "Inspect Element", or by using suitable assistive technology.
+
+:::tip
+This is the preferred approach since we can distinguish between image captions and alt text. Also, we benefit from R's automatic numbering of figures in their captions.
+:::
+
+### Generating Images Using R (or Python)
+
+Use the following format to add R code. This adds the chunk below and you can add in R code. Python (or other languages) can also be added by changing the prefix to 'python' and change the setting accordingly
+[(python setting)](https://quarto.org/docs/computations/python.html).
+
+````{md eval=FALSE}
+::: {.example name="Create Image Using R"}
+```{r,fig.alt="A graph that shows...", fig.cap="A graph demonstrating..."}
+x<-rnorm(100,mean=4,sd=2)
+y<-x^{2}
+plot(x,y,lwd=4,main="Mock plot")
+```
+:::
+````
+
+::: {.example name="Create Image Using R"}
+```{r,fig.alt="A graph that shows...", fig.cap="A graph demonstrating..."}
+x<-rnorm(100,mean=4,sd=2)
+y<-x^{2}
+plot(x,y,lwd=4,main="Mock plot")
+
+```
+:::
+
+
+You can also hide code, so that graphs are produced without showing the code, or you can hide output so the code is shown without the results etc. see [the Quarto execution options](https://quarto.org/docs/computations/execution-options.html) for more information.
+
+::: {.example name="Hide Code"}
+The graph is produced but the code is hidden, by setting echo=FALSE.
+
+```{r,fig.alt="A graph that shows...", fig.cap="A graph demonstrating...",echo=FALSE}
+x<-rnorm(100,mean=4,sd=2)
+y<-x^{2}
+plot(x,y,lwd=4,main="Mock plot")
+
+```
+:::
+
+::: {.example name="Hide Graph"}
+Here, the code is shown but the graph is not shown using eval=FALSE.
+
+```{r,fig.alt="A graph that shows...", fig.cap="A graph demonstrating...",eval=FALSE}
+x<-rnorm(100,mean=4,sd=2)
+y<-x^{2}
+plot(x,y,lwd=4,main="Mock plot")
+
+```
+:::
+
+## Environments
+Quarto Bookdown has several built-in environments, such as Theorem, Example, etc to help organise your notes.
+
+### Numbered Environments
+The following environments have an automatic numbering system and so can be cross-referenced.
+
+|Environment| Printed Name | Label Prefix|
+|:------|:-------|:---------|
+|theorem | Theorem | thm|
+|lemma   | Lemma   | lem|
+|corollary | Corollary | cor|
+|proposition | Proposition | prp|
+|conjecture | Conjecture | cnj|
+|definition | Definition | def|
+|example | Example | exm|
+|exercise | Exercise | exr|
+|hypothesis | Hypothesis | hyp|
+
+: Numbered Environments in Quarto Bookdown {#tbl-numEnvs}
+
+::: {.example name="Example Environment"}
+<br>
+This green box is the `example` environment. To invoke the `example` environment, use the syntax
+```{md eval=FALSE}
+::: {.example name="Example Name"}
+<br>
+Example text...
+:::
+```
+If you do not wish to name your example, then write
+```{md eval=FALSE}
+:::example
+<br>
+Example text...
+:::
+```
+The `<br>` tag is used to start the example text on a new line.
+:::
+
+#### Cross Referencing Environments {-}
+Numbered environments are cross referenced in a similar way to equations (see [Section 2.3][Mathematics]). 
+
+```{md eval=FALSE}
+::: {.theorem #thm-pyth name="Pythagoras' Theorem"}
+<br>
+For a right-angled triangle, if $c$ denotes the length of the hypotenuse
+and $a$ and $b$ denote the lengths of the other two sides, we have
+$$a^2 + b^2 = c^2.$$
+:::
+  
+We use Pythagoras' @thm-pyth to find the length of the missing side.
+```
+
+::: {.theorem #thm-pyth name="Pythagoras' Theorem"}
+<br>
+For a right-angled triangle, if $c$ denotes the length of the hypotenuse
+and $a$ and $b$ denote the lengths of the other two sides, we have
+$$a^2 + b^2 = c^2.$$
+:::
+  
+We use Pythagoras' @thm-pyth to find the length of the missing side.
+
+The syntax for referencing environments is `@<prefix>-<label>`. Refer to @tbl-numEnvs for the prefix corresponding to each environment type.
+And please note that you do not have to include the `prefix` in the sentence.
+
+:::note
+Specially for tables, the following format is required.
+:::
+
+```{md eval=FALSE}
+
+### Unnumbered Environments
+
+|Environment| Printed Name |
+|:------|:-------|
+|proof | Proof |
+|remark | Remark|
+|note | Note|
+|tip | Tip|
+|activity| Activity|
+|discussion| Discussion|
+|solution| Solution|
+
+: Other Environments in Quarto Bookdown {#tbl-otherEnv}
+```
+
+### Unnumbered Environments
+
+|Environment| Printed Name |
+|:------|:-------|
+|proof | Proof |
+|remark | Remark|
+|note | Note|
+|tip | Tip|
+|activity| Activity|
+|discussion| Discussion|
+|solution| Solution|
+
+: Other Environments in Quarto Bookdown {#tbl-otherEnv}
+
+:::note
+We have written a custom template for use in The School of Mathematical Sciences with a specific colour scheme and some additional environments. The code for the School Template is in `style.css`. 
+
+If you want to make adjustments to the colour scheme, or add your own custom environments, then either edit your local copy of `style.css` and `themes` folder, or (if you're not familiar with CSS) contact [Lisa](mailto:lisa.mott@nottingham.ac.uk) to request a change/update.
+:::

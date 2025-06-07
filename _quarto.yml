@@ -15,16 +15,13 @@ book:
     search: true
   chapters:
     - index.qmd
-    - 02-Part2.qmd
-    - 03-Part3.qmd
-    - 04-Part4.qmd
+    - Chapter1.qmd
+    - Chapter2.qmd
+    - Chapter3.qmd
+  appendices:
+    - appendix.qmd
   downloads: [pdf]
   reader-mode: true
-  
-
-language:
-  labels:
-    chapter: "Part "
 
 execute:
   freeze: auto
@@ -36,10 +33,14 @@ format:
   html:
     css: [style.css]
     toc: true
+    other-links:
+      - text: Moodle Link
+        href: https://moodle.nottingham.ac.uk/course/view.php?id=153471
     theme:
       light: theme/light.scss
       dark: theme/dark.scss
     link-external-newwindow: true
+    respect-user-color-scheme: true
 
 
   pdf:

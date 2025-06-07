@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; Some R Bookdown Features – Quarto Template</title>
+<title>2&nbsp; Some Quarto Bookdown Features – Quarto Template</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -75,8 +75,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9050f37a96eef71763ae693b90f28f1b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-0c418812df6cb8baa8fb6a7b546b9f71.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-0582c9837369261afb90c2b4f8f984d1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-89efba16ca470adea3ce630de0e6cbd3.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -138,7 +138,7 @@ window.Quarto = {
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -147,7 +147,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02-Part2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Some R Bookdown Features</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02-Part2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Some Quarto Bookdown Features</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -159,7 +159,7 @@ window.Quarto = {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
       <img src="./logos/UoNTransparent.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
@@ -188,13 +188,13 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to R Bookdown</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Quarto Bookdown</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./02-Part2.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Some R Bookdown Features</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Some Quarto Bookdown Features</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -243,7 +243,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Some R Bookdown Features</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Some Quarto Bookdown Features</span></h1>
 </div>
 
 
@@ -260,34 +260,28 @@ window.Quarto = {
 </header>
 
 
-<p>In this section, we describe the basic use of R Bookdown and introduce some of the more advanced features/customisation. What we present here is representative but not exhaustive. R Bookdown is very well documented by its creator (<a href="https://yihui.org/?target=_blank">Yihui Xie</a>) and others.</p>
+<p>In this section, we describe the basic use of Quarto Bookdown and introduce some of the more advanced features/customisation. What we present here is representative but not exhaustive.</p>
 <ul>
-<li><p>See <a href="https://bookdown.org/?target=_blank">bookdown.org</a> for lots of useful resources, including the comprehensive <a href="https://bookdown.org/yihui/bookdown/?target=_blank">Bookdown Documentation</a>.</p></li>
-<li><p>For advanced use of R Bookdown, the <a href="https://rstudio4edu.github.io/rstudio4edu-book/make-book.html?target=_blank">rstudio4edu guidance</a> is great.</p></li>
-<li><p>We have a dedicated <a href="https://teams.microsoft.com/l/channel/19%3a2e7592dc4df24a42aa4f4f48ae54c96f%40thread.tacv2/HTML%2520documents?groupId=43e79c12-f2dd-4e2b-9cb0-83958af28cdb&amp;tenantId=67bda7ee-fd80-41ef-ac91-358418290a1e?target=_blank">HTML/Accessibility channel</a> on the School’s Digital Learning Resources Team, where you can ask and discuss questions.</p></li>
+<li><p>See <a href="https://quarto.org/?target=_blank">bookdown.org</a> for lots of useful resources, including the comprehensive <a href="https://quarto.org/docs/guide/?target=_blank">Bookdown Documentation</a>.</p></li>
+<li><p>For advanced use of Quarto Bookdown, the <a href="https://quarto.org/docs/gallery/?target=_blank">gallery of Quarto templates</a> is great.</p></li>
 </ul>
 <section id="bookdown-file-structure" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="bookdown-file-structure"><span class="header-section-number">2.1</span> Bookdown File Structure</h2>
-<p>There are a number of files that make up the R Bookdown structure, but you’ll be glad to know that you can ignore most of them. The ones you will spend most of your time editing are the ones with the <code>.Rmd</code> extension.</p>
+<p>There are a number of files that make up the Quarto Bookdown structure, but you’ll be glad to know that you can ignore most of them. The ones you will spend most of your time editing are the ones with the <code>.qmd</code> extension.</p>
 <ul>
-<li><p><code>index.Rmd</code> is recognised by R Bookdown as the first chapter of your book. You can define the <code>title</code> and <code>author</code> of your book in lines 2 and 3 of this file respectively. You should not need to edit the remaining information in lines 4-15. Start writing the first section of your book after the <code>---</code> in line 16.</p></li>
-<li><p>The remaining <code>.Rmd</code> files contain the subsequent sections of your book. RMarkdown will read the files in alphabetical order, so a sensible naming convention for your files is <code>01-&lt;section-name&gt;.Rmd</code>, <code>02-&lt;section-name&gt;.Rmd</code>, etc. Note that each file can contain multiple sections.</p></li>
+<li><p><code>index.qmd</code> is recognised by Quarto Bookdown as the first chapter of your book. This will also be the homepage of your website.</p></li>
+<li><p>The remaining <code>.qmd</code> files contain the subsequent sections of your book. Quarto Markdown will read the files in the order that you defined in the <code>_quarto.yaml</code>.</p></li>
 </ul>
 <div class="tip">
-<p>If you prefer, you can write your entire book in <code>index.Rmd</code>, but this is not recommended as your file could get very big!</p>
+<p>If you prefer, you can write your entire book in <code>index.qmd</code>, but this is not recommended as your file could get very big!</p>
 </div>
 <ul>
-<li><p><code>output.yml</code> provides R Bookdown with some information on how to compile your document. The only part of this you need to edit is line 13, where you can replace Lisa’s name with your own and update the link to your homepage.</p></li>
-<li><p><code>bookdown.yml</code> provides R Bookdown with some more information on your document details. The only lines of interest are:</p>
-<ul>
-<li>Line 1: Update this to change the output filename of your book;</li>
-<li>Line 4: Update this to change the prefix of each <code># Heading</code>. For this template, we have set this to <code>"Part "</code> (note the space at the end). If you would rather not have a prefix at all, comment out this line by inserting a <code>#</code> at the start of line 4.</li>
-</ul></li>
+<li><code>_quarto.yml</code> provides some basic metadata about your book, such as the title, author, and date. Additionally, there are plenty of settings you can customise in this file, such as the output format, font size, and layout.</li>
 </ul>
 </section>
 <section id="markdown-basics" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="markdown-basics"><span class="header-section-number">2.2</span> Markdown Basics</h2>
-<p>If you’re completely new to R Markdown, the <a href="https://rmarkdown.rstudio.com/authoring_basics.html?target=_blank">Markdown Basics</a> guide provides an excellent overview of the most common syntax. Most of it is very straightforward and intuitive, but will take some getting used to if you are accustomed to LaTeX.</p>
+<p>If you’re completely new to Quarto Markdown, the <a href="https://quarto.org/docs/authoring/markdown-basics.html">Markdown Basics</a> guide provides an excellent overview of the most common syntax. Most of it is very straightforward and intuitive, but will take some getting used to if you are accustomed to LaTeX.</p>
 <section id="examples" class="level3" data-number="2.2.1">
 <h3 data-number="2.2.1" class="anchored" data-anchor-id="examples"><span class="header-section-number">2.2.1</span> Examples</h3>
 <section id="emphasis" class="level4 unnumbered">
@@ -308,7 +302,7 @@ window.Quarto = {
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">##### Heading 5</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">###### Heading 6</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>for headings, subheadings, etc. R Bookdown will automatically number your headings. To suppress the heading number, add <code>{-}</code> at the end of your heading, e.g.&nbsp;<code>## Unnumbered Subheading {-}</code>.</p>
+<p>for headings, subheadings, etc. Quarto Bookdown will automatically number your headings. To suppress the heading number, add <code>{-}</code> at the end of your heading, e.g.&nbsp;<code>## Unnumbered Subheading {-}</code>.</p>
 </section>
 <section id="links-and-references" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="links-and-references">Links and References</h4>
@@ -320,8 +314,8 @@ window.Quarto = {
 </div>
 <div class="example" name="Cross Reference">
 <p><br> Link to other parts of your book using heading names.</p>
-<pre><code>Find out how to [Upload your book to Moodle][Upload Your Book to Moodle].</code></pre>
-<p>Find out how to [Upload your book to Moodle][Upload Your Book to Moodle].</p>
+<pre><code>Find out how to make [Links and References][Links and References].</code></pre>
+<p>Find out how to make <a href="#links-and-references">Links and References</a>.</p>
 </div>
 <div class="tip">
 <p>We recommend suppressing numbers from Heading 4 onwards.</p>
@@ -368,7 +362,7 @@ window.Quarto = {
 <p>Mathematics can be entered using familiar LaTeX commands and delimiters.</p>
 <section id="inline-mathematics" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="inline-mathematics">Inline Mathematics</h4>
-<p>Inline mathematics is delimited using either <code>$...$</code> or <code>\(...\)</code>.</p>
+<p>Inline mathematics is delimited using either <code>$...$</code>.</p>
 <div class="example" name="Inline Mathematics">
 <p><br> The syntax</p>
 <div class="cell">
@@ -379,7 +373,7 @@ window.Quarto = {
 </section>
 <section id="display-mathematics" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="display-mathematics">Display Mathematics</h4>
-<p>Display mathematics (unnumbered) is delimited using either <code>$$...$$</code>, <code>\[...\]</code> or <code>\begin{equation*}...\end{equation*}</code>.</p>
+<p>Display mathematics (unnumbered) is delimited using either <code>$$...$$</code> or <code>\begin{equation}...\end{equation}</code>.</p>
 <div class="example" name="Display Mathematics">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>$$</span>
@@ -394,19 +388,19 @@ window.Quarto = {
 </section>
 <section id="numbered-equation" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="numbered-equation">Numbered Equation</h4>
-<p>Enter a numbered equation in the usual way using <code>\begin{equation}...\end{equation}</code>. Whilst the equation environment follows conventional LaTeX syntax, R Bookdown does not support <code>\label</code>, <code>\eqref</code> to tag and reference equations. See the example below for how to tag and reference an equation in R Bookdown.</p>
-<div id="EqRef" class="example" name="Numbered Equation">
+<p>Enter a numbered equation in the usual way using <code>\begin{equation}...\end{equation}</code>. Whilst the equation environment follows conventional LaTeX syntax, Quarto Bookdown does not support <code>\label</code>, <code>\eqref</code> to tag and reference equations. See the example below for how to tag and reference an equation in R Bookdown.</p>
+<div class="example" name="Numbered Equation">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>$$ {#eq-binom}</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>Consider the Binomial Theorem @eq-binom.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>Consider the Binomial Theorem (@eq-binom).</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><span id="eq-binom"><span class="math display">\[
 f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
 \tag{2.1}\]</span></span></p>
-<p>Consider the Binomial Theorem <a href="#eq-binom" class="quarto-xref">Equation&nbsp;<span>2.1</span></a>.</p>
+<p>Consider the Binomial Theorem (<a href="#eq-binom" class="quarto-xref">Equation&nbsp;<span>2.1</span></a>).</p>
 </div>
 <div class="tip">
 <p>Do not use underscores (“_“) in your labels for cross referencing equations, or any other parts (e.g.&nbsp;tables, theorems, etc. which are discussed in later sections). If you have a label with multiple words, either just write them all in lower case, or use camel case, e.g.&nbsp;<code>#PythThm</code> instead of <code>#pyth_thm</code>.</p>
@@ -415,7 +409,7 @@ f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
 </section>
 <section id="user-defined-commands" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="user-defined-commands">User-Defined Commands</h4>
-<p>You may be the sort of person who likes writing your own LaTeX commands to save some typing. You can add custom commands anywhere in a <code>.Rmd</code> file and they will work in the expected way, as long as you define the command before its first use in your book.</p>
+<p>You may be the sort of person who likes writing your own LaTeX commands to save some typing. You can add custom commands anywhere in a <code>.qmd</code> file and they will work in the expected way, as long as you define the command before its first use in your book.</p>
 <div class="tip">
 <p>The best place to define your custom commands is in <code>index.md</code> just below Line 16.</p>
 </div>
@@ -439,61 +433,11 @@ f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
 \]</span></p>
 </div>
 </section>
-<section id="multiple-and-multiline-equations" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="multiple-and-multiline-equations">Multiple and Multiline Equations</h4>
-<p>R Bookdown interprets the <code>align</code> environment in the usual way. You can tag each line individually to refer back to specific equations. Replace the tag with <code>\notag</code> to suppress the numbering of a line.</p>
+<section id="multiline-equations" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="multiline-equations">Multiline Equations</h4>
+<p>Quarto Bookdown seems to not support the multi-ref environment in one equation.</p>
 <div class="note">
-<p>Unfortunately, R Bookdown does not support the <code>subequations</code> environment (e.g.&nbsp;for labelling equations 2.2a, 2.2b etc.)</p>
-</div>
-<div class="example" name="Align Environment">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">align</span>}</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ss">g(X_{n}) &amp;= g(</span><span class="sc">\theta</span><span class="ss">)+g'({</span><span class="sc">\tilde</span><span class="ss">{</span><span class="sc">\theta</span><span class="ss">}})(X_{n}-</span><span class="sc">\theta</span><span class="ss">) (</span><span class="sc">\#</span><span class="ss">eq:align1) </span><span class="sc">\\</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\sqrt</span><span class="ss">{n}[g(X_{n})-g(</span><span class="sc">\theta</span><span class="ss">)] &amp;= g'</span><span class="sc">\left</span><span class="ss">({</span><span class="sc">\tilde</span><span class="ss">{</span><span class="sc">\theta</span><span class="ss">}}</span><span class="sc">\right</span><span class="ss">)</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="ss">  </span><span class="sc">\sqrt</span><span class="ss">{n}[X_{n}-</span><span class="sc">\theta</span><span class="ss"> ] </span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="ss">(</span><span class="sc">\#</span><span class="ss">eq:align2)</span></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">align</span>}</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>Consider the equations <span class="fu">\@ref</span>(eq:align1) and <span class="fu">\@ref</span>(eq:align2).</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><span class="math display">\[\begin{align}
-g(X_{n}) &amp;= g(\theta)+g'({\tilde{\theta}})(X_{n}-\theta) (\#eq:align1) \\
-\sqrt{n}[g(X_{n})-g(\theta)] &amp;= g'\left({\tilde{\theta}}\right)
-  \sqrt{n}[X_{n}-\theta ]
-(\#eq:align2)
-\end{align}\]</span></p>
-<p>Consider equations @ref(eq:align1) and @ref(eq:align2).</p>
-</div>
-<div class="note">
-<p>There is a (possibly unavoidable) bug with the cross-referencing of multiple equations in the align environment. Whilst adding a label to each equation successfully adds a number to the equation where it is displayed, the hyperlink does not work for the first equation. In general, only the hyperlink to the final equation will work. In the situation where you have multiple equations and it is important to be able to individually reference each one, we recommend writing each equation in its own <code>equation</code> environment using the method in Example @ref(exm:EqRef).</p>
-</div>
-<p>You can use the <code>split</code> environment inside <code>equation</code> so that all lines in a multiline equation share the same number.</p>
-<div class="example" name="Split Environment">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">equation</span>}<span class="ss"> </span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">split</span>}</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\mathrm</span><span class="ss">{Var}(</span><span class="sc">\hat</span><span class="ss">{</span><span class="sc">\beta</span><span class="ss">}) &amp; =</span><span class="sc">\mathrm</span><span class="ss">{Var}((X'X)^{-1}X'y)</span><span class="sc">\\</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="ss"> &amp; =(X'X)^{-1}X'</span><span class="sc">\mathrm</span><span class="ss">{Var}(y)((X'X)^{-1}X')'</span><span class="sc">\\</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="ss"> &amp; =(X'X)^{-1}X'</span><span class="sc">\mathrm</span><span class="ss">{Var}(y)X(X'X)^{-1}</span><span class="sc">\\</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="ss"> &amp; =(X'X)^{-1}X'</span><span class="sc">\sigma</span><span class="ss">^{2}IX(X'X)^{-1}</span><span class="sc">\\</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="ss"> &amp; =(X'X)^{-1}</span><span class="sc">\sigma</span><span class="ss">^{2}</span></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">split</span>}</span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="ss">(</span><span class="sc">\#</span><span class="ss">eq:var-beta)</span></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">equation</span>} </span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>See <span class="fu">\@ref</span>(eq:var-beta) for the calculation of <span class="ss">\(</span><span class="sc">\mathrm</span><span class="ss">{Var}(</span><span class="sc">\hat</span><span class="ss">{</span><span class="sc">\beta</span><span class="ss">})\)</span>.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><span class="math display">\[\begin{equation}
-\begin{split}
-\mathrm{Var}(\hat{\beta}) &amp; =\mathrm{Var}((X'X)^{-1}X'y)\\
-&amp; =(X'X)^{-1}X'\mathrm{Var}(y)((X'X)^{-1}X')'\\
-&amp; =(X'X)^{-1}X'\mathrm{Var}(y)X(X'X)^{-1}\\
-&amp; =(X'X)^{-1}X'\sigma^{2}IX(X'X)^{-1}\\
-&amp; =(X'X)^{-1}\sigma^{2}
-\end{split}
-(\#eq:var-beta)
-\end{equation}\]</span></p>
-<p>See @ref(eq:var-beta) for the calculation of <span class="math inline">\(\mathrm{Var}(\hat{\beta})\)</span>.</p>
+<p>Unfortunately, Quarto Bookdown does not support the <code>subequations</code> environment (e.g.&nbsp;for labelling equations 2.2a, 2.2b etc.)</p>
 </div>
 </section>
 </section>
@@ -501,10 +445,10 @@ g(X_{n}) &amp;= g(\theta)+g'({\tilde{\theta}})(X_{n}-\theta) (\#eq:align1) \\
 <h2 data-number="2.4" class="anchored" data-anchor-id="tables"><span class="header-section-number">2.4</span> Tables</h2>
 <p>Here is a basic table.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>|Header 1| Header 2 | Header 3|</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>|:------|:-------|:---------|</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>|Row 1 | Number | Number|</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>|Row 2 | Number | Number|</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>|Header 1| Header 2 | Header 3|</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>|:------|:-------|:---------|</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>|Row 1 | Number | Number|</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>|Row 2 | Number | Number|</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <table class="caption-top table">
 <thead>
@@ -528,24 +472,24 @@ g(X_{n}) &amp;= g(\theta)+g'({\tilde{\theta}})(X_{n}-\theta) (\#eq:align1) \\
 </tbody>
 </table>
 <div class="tip">
-<p>Only very simple tables can be created using Markdown syntax (by design). This is generally a good thing for accessibility, but if you want to create more intricate tables, you can do so using raw HTML inside a <code>.Rmd</code> file (HTML is interpreted by R Bookdown just as readily as Markdown).</p>
+<p>Only very simple tables can be created using Markdown syntax (by design). This is generally a good thing for accessibility, but if you want to create more intricate tables, you can do so using raw HTML inside a <code>.qmd</code> file (HTML is interpreted by Quarto Bookdown just as readily as Markdown).</p>
 <p>If you get fed up dealing with plain text to make your table, there are many good Markdown/HTML table generators online. <a href="https://www.tablesgenerator.com/html_tables?target=_blank">I use this one</a>, but others are available.</p>
 </div>
 </section>
 <section id="images" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="images"><span class="header-section-number">2.5</span> Images</h2>
-<p>We look at two approaches for adding the same image. We add <strong>alternative text (usually referred to as “alt text”)</strong> in both cases. You will see how R Markdown treats them differently.</p>
+<p>We look at two approaches for adding the same image. We add <strong>alternative text (usually referred to as “alt text”)</strong> in both cases. You will see how Quarto Markdown treats them differently.</p>
 <div class="note">
-<p>The files must either be in the same directory as your <code>.Rmd</code> file(s), or you need to specify the path to the subfolder containing your image file.</p>
+<p>The files must either be in the same directory as your <code>.qmd</code> file(s), or you need to specify the path to the subfolder containing your image file.</p>
 </div>
 <section id="approach-1-markdown" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="approach-1-markdown">Approach 1 (Markdown)</h4>
 <p>This is the easier approach but the alt text is not as nice (we have cheated and written it as a caption).</p>
-<pre><code>![Here is the alt text](workers.png)</code></pre>
+<pre><code>![Here is the caption](workers.png "alt text")</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="workers.png" class="img-fluid figure-img"></p>
-<figcaption>Here is the alt text</figcaption>
+<p><img src="workers.png" title="alt text" class="img-fluid figure-img"></p>
+<figcaption>Here is the caption text</figcaption>
 </figure>
 </div>
 </section>
@@ -553,10 +497,10 @@ g(X_{n}) &amp;= g(\theta)+g'({\tilde{\theta}})(X_{n}-\theta) (\#eq:align1) \\
 <h4 class="unnumbered anchored" data-anchor-id="approach-2-r">Approach 2 (R)</h4>
 <p>This is a slightly more difficult approach and requires the use of R, but it is better for “hiding” the alternative text.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, echo=FALSE, out.width="600px", fig.alt="Here is the alt text",</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="in">    fig.cap="Here is the image caption."}</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="in">    knitr::include_graphics("workers.png")</span></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, echo=FALSE, out.width="600px", fig.alt="Here is the alt text",</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="in">    fig.cap="Here is the image caption."}</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="in">    knitr::include_graphics("workers.png")</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
@@ -575,12 +519,35 @@ g(X_{n}) &amp;= g(\theta)+g'({\tilde{\theta}})(X_{n}-\theta) (\#eq:align1) \\
 </section>
 <section id="generating-images-using-r-or-python" class="level3" data-number="2.5.1">
 <h3 data-number="2.5.1" class="anchored" data-anchor-id="generating-images-using-r-or-python"><span class="header-section-number">2.5.1</span> Generating Images Using R (or Python)</h3>
-<p>Press Ctrl+Alt+I to add R code. This adds the chunk below and you can add in R code. Python (or other languages) can also be added by pressing the ‘+C’ image at the top right corner.</p>
+<p>Use the following format to add R code. This adds the chunk below and you can add in R code. Python (or other languages) can also be added by changing the prefix to ‘python’ and change the setting accordingly <a href="https://quarto.org/docs/computations/python.html">(python setting)</a>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>::: {.example name="Create Image Using R"}</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="in">```{r,fig.alt="A graph that shows...", fig.cap="A graph demonstrating..."}</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="in">x&lt;-rnorm(100,mean=4,sd=2)</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="in">y&lt;-x^{2}</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="in">plot(x,y,lwd=4,main="Mock plot")</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <div class="example" name="Create Image Using R">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="fu">rnorm</span>(<span class="dv">100</span>,<span class="at">mean=</span><span class="dv">4</span>,<span class="at">sd=</span><span class="dv">2</span>)</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>y<span class="ot">&lt;-</span>x<span class="sc">^</span>{<span class="dv">2</span>}</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x,y,<span class="at">lwd=</span><span class="dv">4</span>,<span class="at">main=</span><span class="st">"Mock plot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="fu">rnorm</span>(<span class="dv">100</span>,<span class="at">mean=</span><span class="dv">4</span>,<span class="at">sd=</span><span class="dv">2</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>y<span class="ot">&lt;-</span>x<span class="sc">^</span>{<span class="dv">2</span>}</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x,y,<span class="at">lwd=</span><span class="dv">4</span>,<span class="at">main=</span><span class="st">"Mock plot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="02-Part2_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" alt="A graph that shows..." width="672"></p>
+<figcaption>A graph demonstrating…</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>You can also hide code, so that graphs are produced without showing the code, or you can hide output so the code is shown without the results etc. see <a href="https://quarto.org/docs/computations/execution-options.html">the Quarto execution options</a> for more information.</p>
+<div class="example" name="Hide Code">
+<p>The graph is produced but the code is hidden, by setting echo=FALSE.</p>
+<div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -591,38 +558,29 @@ g(X_{n}) &amp;= g(\theta)+g'({\tilde{\theta}})(X_{n}-\theta) (\#eq:align1) \\
 </div>
 </div>
 </div>
-<p>You can also hide code, so that graphs are produced without showing the code, or you can hide output so the code is shown without the results etc. see <a href="https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf?target=_blank">the R Markdown cheatsheet</a> for more information.</p>
-<div class="example" name="Hide Code">
-<p>The graph is produced but the code is hidden, by setting echo=FALSE.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="02-Part2_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" alt="A graph that shows..." width="672"></p>
-<figcaption>A graph demonstrating…</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
 <div class="example" name="Hide Graph">
 <p>Here, the code is shown but the graph is not shown using eval=FALSE.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="fu">rnorm</span>(<span class="dv">100</span>,<span class="at">mean=</span><span class="dv">4</span>,<span class="at">sd=</span><span class="dv">2</span>)</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>y<span class="ot">&lt;-</span>x<span class="sc">^</span>{<span class="dv">2</span>}</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x,y,<span class="at">lwd=</span><span class="dv">4</span>,<span class="at">main=</span><span class="st">"Mock plot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="fu">rnorm</span>(<span class="dv">100</span>,<span class="at">mean=</span><span class="dv">4</span>,<span class="at">sd=</span><span class="dv">2</span>)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>y<span class="ot">&lt;-</span>x<span class="sc">^</span>{<span class="dv">2</span>}</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x,y,<span class="at">lwd=</span><span class="dv">4</span>,<span class="at">main=</span><span class="st">"Mock plot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
 </section>
 <section id="environments" class="level2" data-number="2.6">
 <h2 data-number="2.6" class="anchored" data-anchor-id="environments"><span class="header-section-number">2.6</span> Environments</h2>
-<p>R Bookdown has several built-in environments, such as Theorem, Example, etc to help organise your notes.</p>
+<p>Quarto Bookdown has several built-in environments, such as Theorem, Example, etc to help organise your notes.</p>
 <section id="numbered-environments" class="level3" data-number="2.6.1">
 <h3 data-number="2.6.1" class="anchored" data-anchor-id="numbered-environments"><span class="header-section-number">2.6.1</span> Numbered Environments</h3>
 <p>The following environments have an automatic numbering system and so can be cross-referenced.</p>
+<div id="tbl-numEnvs" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-numEnvs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.1: Numbered Environments in Quarto Bookdown
+</figcaption>
+<div aria-describedby="tbl-numEnvs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
-<caption>(#tab:num-envs) Numbered Environments in R Bookdown</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Environment</th>
@@ -678,20 +636,23 @@ g(X_{n}) &amp;= g(\theta)+g'({\tilde{\theta}})(X_{n}-\theta) (\#eq:align1) \\
 </tr>
 </tbody>
 </table>
+</div>
+</figure>
+</div>
 <div class="example" name="Example Environment">
 <p><br> This green box is the <code>example</code> environment. To invoke the <code>example</code> environment, use the syntax</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>::: {.example name="Example Name"}</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>&lt;br&gt;</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>Example text...</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>::: {.example name="Example Name"}</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>&lt;br&gt;</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>Example text...</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>If you do not wish to name your example, then write</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>:::example</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>&lt;br&gt;</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>Example text...</span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>:::example</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>&lt;br&gt;</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>Example text...</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The <code>&lt;br&gt;</code> tag is used to start the example text on a new line.</p>
 </div>
@@ -699,29 +660,50 @@ g(X_{n}) &amp;= g(\theta)+g'({\tilde{\theta}})(X_{n}-\theta) (\#eq:align1) \\
 <h4 class="unnumbered anchored" data-anchor-id="cross-referencing-environments">Cross Referencing Environments</h4>
 <p>Numbered environments are cross referenced in a similar way to equations (see <a href="#mathematics">Section 2.3</a>).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>::: {.theorem #thm-pyth name="Pythagoras' Theorem"}</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>&lt;br&gt;</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>For a right-angled triangle, if $c$ denotes the length of the hypotenuse</span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>and $a$ and $b$ denote the lengths of the other two sides, we have</span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>$$a^2 + b^2 = c^2.$$</span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>We use Pythagoras' Theorem @thm-pyth to find the length of the missing side.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>::: {.theorem #thm-pyth name="Pythagoras' Theorem"}</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>&lt;br&gt;</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>For a right-angled triangle, if $c$ denotes the length of the hypotenuse</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>and $a$ and $b$ denote the lengths of the other two sides, we have</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>$$a^2 + b^2 = c^2.$$</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>We use Pythagoras' @thm-pyth to find the length of the missing side.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="thm-pyth" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 2.1 (Pythagoras’ Theorem)</strong></span> <br> For a right-angled triangle, if <span class="math inline">\(c\)</span> denotes the length of the hypotenuse and <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> denote the lengths of the other two sides, we have <span class="math display">\[a^2 + b^2 = c^2.\]</span></p>
 </div>
-<p>We use Pythagoras’ Theorem <a href="#thm-pyth" class="quarto-xref">Theorem&nbsp;<span>2.1</span></a> to find the length of the missing side.</p>
-<p>The syntax for referencing environments is <code>@ref(&lt;prefix&gt;-&lt;label&gt;)</code>. Refer to Table @ref(tab:num-envs) for the prefix corresponding to each environment type.</p>
+<p>We use Pythagoras’ <a href="#thm-pyth" class="quarto-xref">Theorem&nbsp;<span>2.1</span></a> to find the length of the missing side.</p>
+<p>The syntax for referencing environments is <code>@&lt;prefix&gt;-&lt;label&gt;</code>. Refer to <a href="#tbl-numEnvs" class="quarto-xref">Table&nbsp;<span>2.1</span></a> for the prefix corresponding to each environment type. And please note that you do not have to include the <code>prefix</code> in the sentence.</p>
 <div class="note">
-<p>The prefix for a table reference is <code>tab</code>.</p>
+<p>Specially for tables, the following format is required.</p>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">### Unnumbered Environments</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>|Environment| Printed Name |</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>|:------|:-------|</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>|proof | Proof |</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>|remark | Remark|</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>|note | Note|</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>|tip | Tip|</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>|activity| Activity|</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>|discussion| Discussion|</span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>|solution| Solution|</span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>: Other Environments in Quarto Bookdown {#tbl-otherEnv}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
 <section id="unnumbered-environments" class="level3" data-number="2.6.2">
 <h3 data-number="2.6.2" class="anchored" data-anchor-id="unnumbered-environments"><span class="header-section-number">2.6.2</span> Unnumbered Environments</h3>
+<div id="tbl-otherEnv" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-otherEnv-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.2: Other Environments in Quarto Bookdown
+</figcaption>
+<div aria-describedby="tbl-otherEnv-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
-<caption>(#tab:oth-envs) Other Environments in R Bookdown</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Environment</th>
@@ -759,9 +741,12 @@ g(X_{n}) &amp;= g(\theta)+g'({\tilde{\theta}})(X_{n}-\theta) (\#eq:align1) \\
 </tr>
 </tbody>
 </table>
+</div>
+</figure>
+</div>
 <div class="note">
 <p>We have written a custom template for use in The School of Mathematical Sciences with a specific colour scheme and some additional environments. The code for the School Template is in <code>style.css</code>.</p>
-<p>If you want to make adjustments to the colour scheme, or add your own custom environments, then either edit your local copy of <code>style.css</code>, or (if you’re not familiar with CSS) contact <a href="mailto:tom.wicks@nottingham.ac.uk">Tom</a> or <a href="mailto:lisa.mott@nottingham.ac.uk">Lisa</a> to request a change/update.</p>
+<p>If you want to make adjustments to the colour scheme, or add your own custom environments, then either edit your local copy of <code>style.css</code> and <code>themes</code> folder, or (if you’re not familiar with CSS) contact <a href="mailto:lisa.mott@nottingham.ac.uk">Lisa</a> to request a change/update.</p>
 </div>
 
 
@@ -1017,6 +1002,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         if (link.dataset.originalHref !== undefined) {
           link.href = link.dataset.originalHref;
         }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -1332,8 +1322,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Introduction to R Bookdown">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to R Bookdown</span></span>
+      <a href="./index.html" class="pagination-link" aria-label="Introduction to Quarto Bookdown">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Quarto Bookdown</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

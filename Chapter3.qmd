@@ -1,0 +1,52 @@
+# Adding colour
+
+This is an advanced feature for bookdown and is not suitable for beginners.
+
+It is quite easy to use HTML to add <span style="color:blue">colour to text.</span> However when you change the theme to night you will not be able to see the colour.
+
+To display content only in light mode, use the .light-content CSS class; to display content only in dark mode, use the .dark-content class.
+
+Usually you should provide light and dark content in the same place and at the same size, so that page layout is unaffected when switching between modes.
+
+For example, the paragraph produced by the following code will contain different text in light and dark mode:
+
+``` {eval=FALSE}
+::: {.light-content}
+<span style="color:blue">This text will be shown in light mode.</span>
+:::
+
+::: {.dark-content}
+<span style="color:green">This text will be shown in dark mode.</span>
+:::
+```
+
+::: {.light-content}
+<span style="color:blue">This text will be shown in light mode.</span>
+:::
+
+::: {.dark-content}
+<span style="color:green">This text will be shown in dark mode.</span>
+:::
+
+## Adding colour to maths output
+
+This is even more complicated and uses the style file. We have set three default colours for blue, red and green that meet accessibility requirements in the three different themes.
+
+$$
+g(\color{blue}{x-1}) = 3(\color{red}{x-1}) + 1 = \color{green}{3x} - 3 + 1 = 3x-2.
+$$
+
+
+## New box types
+
+We have added some new box types to the template.
+
+:::mistake
+
+Watch out for this common mistake!
+:::
+
+
+:::keypoint
+Here is a key point.
+:::

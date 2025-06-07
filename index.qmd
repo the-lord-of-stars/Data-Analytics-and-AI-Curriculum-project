@@ -2,39 +2,47 @@
 description: "This is the notes for your_module_name"
 ---
 
-# Introduction to R Bookdown
+# Introduction to Quarto Bookdown
 
-This is a template to create notes in R bookdown. For more information on R bookdown please see [this website.](https://bookdown.org/yihui/bookdown/?target=_blank)
-
-## R Bookdown Installation
+This is a template to create notes in Quarto bookdown. For more information on Quarto bookdown please see [this website.](https://quarto.org/?target=_blank)
 
 ::: note
-If you do not already have R and RStudio installed on your computer, go to the [RStudio Desktop download page](https://posit.co/download/rstudio-desktop/?target=_blank) and follow the instructions to install (1) R and (2) RStudio.
+This template is based on the previous version of the R Bookdown template. If you find any issues or have any suggestions, please add a discussion in out GitHub repository.
+Additionally, you may find some of the old R Bookdown files are not used in this template, but they are kept for reference in `other` folder.
 :::
 
-### Use RStudio to install R Bookdown {-}
+## Quarto Bookdown Installation
 
-Open RStudio. In the console (box on the left-hand side in the default view), type
+::: note
+If you do not already have R and IDE installed on your computer, go to the [RStudio Desktop download page](https://posit.co/download/rstudio-desktop/?target=_blank) and follow the instructions to install (1) R and (2) RStudio.
+:::
 
-``` {r eval=FALSE}
-install.packages("bookdown")
-```
+### Install Quarto Bookdown {-}
+
+Then, go to the Quarto official website to download the quarto package. Here is [the link](https://quarto.org/docs/get-started/?target=_blank).
 
 ## Compile a Book
-Follow the steps below to download and compile the source code for this template in R Bookdown.
+Follow the steps below to download and compile the source code for this template in Quarto Bookdown.
 
-1) Go to the [Accessible Maths Materials Sharepoint](https://uniofnottm.sharepoint.com/sites/AccessibleMathsMaterials?target=_blank) and click on the **Download Source Files** link under R Bookdown to download `BookdownExample.zip`.
-2) Move the file to the folder where you want to store your notes, then unzip it to the same folder.
+1) Download this project using Github. (You can directly go to the GitHub page by clicking the sidebar icon)
+2) Install the Quarto extension for your IDE, such as VSCode, IntelliJ or RStudio.
 
 :::tip
 Instructions for unzipping files: [[Windows](https://support.microsoft.com/en-us/windows/zip-and-unzip-files-f6dde0a7-0fec-8294-e1d3-703ed85e7ebc?target=_blank), [MacOS](https://support.apple.com/en-gb/guide/mac-help/mchlp2528/mac#:~:text=Unzip%20(expand)%20a%20compressed%20item,zip%20file.?target=_blank), [Linux](https://unstop.com/blog/how-to-unzip-a-file-in-linux?target=_blank)]
+Moreover, in some new IDEs, you can directly clone the project by entering the GitHub URL.
 :::
 
-3) In RStudio in the top-right corner click on the blue Project sign. Click on "Open Project" and navigate to your unzipped file, then open `r_bookdown_template.Rproj`.
+3) Open the terminal (make sure you are in the root directory of the project), and type the following command:
 
-4) In the box with "Environment", "History", "Connections", "Build", "Tutorial", click on the "Build" tab, then click on the "Build Book" button.
+``` bash
+quarto render
+```
 
-5) On clicking the button in the previous step, a preview of your compiled book should appear. To view your book outside of RStudio, navigate to the "_book" subfolder that was created when you compiled your book, then open `index.html` in your favourite browser.
+4) To view your book outside of RStudio, navigate to the "_book" subfolder that was created when you compiled your book, then open `index.html` in your favourite browser. Or you can simply set up a local server by running the following command in the terminal:
+
+``` bash
+quarto preview
+```
 
 ## Upload Your Book to Moodle
 Please watch the video guide below.

@@ -50,9 +50,9 @@ If the link does not work then please use [this alternative link.](https://media
 :::example
 **How to use the template - Another video example**
 
-Note to use all of this you will need R studio and R to be installed on your machine. Then you just need to open the project in R studio.
+Note to use all of this you will need some IDE and R to be installed on your machine. Then you just need to open the project in your IDE.
 
-Then in R studio just create a new .Rmd file to add a new chapter and just save it as 01, 02, 03, 04 etc. in the name for the order you want that chapter to appear.
+Then  just create a new .qmd file to add a new chapter and add it into `_quarto.yaml` for the order you want that chapter to appear.
 
 A video below shows what to do in more detail. If the video does not work then please use [this alternative link.](https://mediaspace.nottingham.ac.uk/media/How+to+use+the+template/1_brjfqb44)
 

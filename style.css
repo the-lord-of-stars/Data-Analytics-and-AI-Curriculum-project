@@ -13,25 +13,6 @@ pre code {
   white-space: inherit;
 }
 
-/* Format core theme navbar buttons */
-.book .book-header .btn{display:block;height:50px;padding:0 15px;border-bottom:none;color:black;text-transform:uppercase;line-height:50px;-webkit-box-shadow:none!important;box-shadow:none!important;position:relative;font-size:14px}
-
-.book .book-header .btn:hover{position:relative;text-decoration:none;color:#0099fe;background:0 0}
-
-.dropdown-menu .buttons .button{border:0;background-color:transparent;color:black;width:100%;text-align:center;float:left;line-height:1.42857143;padding:8px 4px}
-
-.dropdown-menu .buttons .button:hover{color:#0099fe}
-
-
-
-/* Simplify formatting of navbar link */
-.book .book-header h1 {
-  background: none;
-  border: none;
-  color: black;
-}
-
-
 
 /* Format title text */
 .title {
@@ -165,41 +146,15 @@ div.tip {
   font-weight: bold;
 }
 
-/* Logos */
-.UoNLogo {width:250px; height:92px; background:URL(logos/UoNTransparent.png) no-repeat; background-size:250px 92px;}
-
-.color-theme-1 .UoNLogo {width:250px; height:92px; background:URL(logos/UoNTransparentDark.png) no-repeat; background-size:250px 92px;}
-
-.color-theme-2 .UoNLogo {width:250px; height:92px; background:URL(logos/UoNTransparentDark.png) no-repeat; background-size:250px 92px;}
-
-
-.book.color-theme-2 .book-body .page-wrapper .page-inner section.normal pre,
-.book.color-theme-2 .book-body .page-wrapper .page-inner section.normal code {
-  color: #333;
-  background: #f7f7f7;
-  border-color: #f7f7f7;
-}
 
 /* Adding colour text in different modes */
 
 .book .book-body .page-wrapper .myhl {color: #0000FF}
 
-.book.color-theme-2 .book-body .page-wrapper .myhl {color: #41b6eb}
-
-.book.color-theme-1 .book-body .page-wrapper .myhl {color: #0000FF}
-
 .book .book-body .page-wrapper .myhl2 {color: #CD2026}
-
-.book.color-theme-2 .book-body .page-wrapper .myhl2 {color: #FFC845}
-
-.book.color-theme-1 .book-body .page-wrapper .myhl2 {color: #CD2026}
-
 
 .book .book-body .page-wrapper .myhl3 {color:#2e8540 }
 
-.book.color-theme-2 .book-body .page-wrapper .myhl3 {color: #64eb34}
-
-.book.color-theme-1 .book-body .page-wrapper .myhl3 {color:#8c34eb}
 
 
 /* Adding colour to mathematical notation */
@@ -208,12 +163,7 @@ div.tip {
 .book .book-body .page-wrapper .mjx-mstyle[style*="color: blue"] {
 color: #0000FF !important;
 }
-.book.color-theme-1 .book-body .page-wrapper .mjx-mstyle[style*="color: blue"] {
-color: #0000FF !important;
-}
-.book.color-theme-2 .book-body .page-wrapper .mjx-mstyle[style*="color: blue"] {
-color:  #41b6eb !important;
-}
+
 
 
 
@@ -258,11 +208,21 @@ div.keypoint {
   font-weight: bold;
 }
 
-/* Adding URL colour in Sepia */
-
-.book.color-theme-1 .book-body .page-wrapper .page-inner section.normal a{
-  color:#770000;
+/* light-dark-toggle.css */
+.light-content, .dark-content {
+  display: none;
 }
+
+body.quarto-light .light-content {
+  display: block;
+}
+
+body.quarto-dark .dark-content {
+  display: block;
+}
+
+
+
 
 
 

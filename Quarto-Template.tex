@@ -280,78 +280,95 @@
 \setcounter{tocdepth}{2}
 \tableofcontents
 }
+\listoffigures
+\listoftables
 
 \mainmatter
 \bookmarksetup{startatroot}
 
-\chapter{Introduction to R Bookdown}\label{introduction-to-r-bookdown}
+\chapter{Introduction to Quarto
+Bookdown}\label{introduction-to-quarto-bookdown}
 
-This is a template to create notes in R bookdown. For more information
-on R bookdown please see
-\href{https://bookdown.org/yihui/bookdown/?target=_blank}{this website.}
+This is a template to create notes in Quarto bookdown. For more
+information on Quarto bookdown please see
+\href{https://quarto.org/?target=_blank}{this website.}
 
-\section{R Bookdown Installation}\label{r-bookdown-installation}
+This template is based on the previous version of the R Bookdown
+template. If you find any issues or have any suggestions, please add a
+discussion in out GitHub repository. Additionally, you may find some of
+the old R Bookdown files are not used in this template, but they are
+kept for reference.
 
-If you do not already have R and RStudio installed on your computer, go
-to the
+\section{Quarto Bookdown
+Installation}\label{quarto-bookdown-installation}
+
+If you do not already have R and IDE installed on your computer, go to
+the
 \href{https://posit.co/download/rstudio-desktop/?target=_blank}{RStudio
 Desktop download page} and follow the instructions to install (1) R and
 (2) RStudio.
 
-\subsection*{Use RStudio to install R
-Bookdown}\label{use-rstudio-to-install-r-bookdown}
-\addcontentsline{toc}{subsection}{Use RStudio to install R Bookdown}
+\subsection*{Install Quarto Bookdown}\label{install-quarto-bookdown}
+\addcontentsline{toc}{subsection}{Install Quarto Bookdown}
 
-Open RStudio. In the console (box on the left-hand side in the default
-view), type
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{install.packages}\NormalTok{(}\StringTok{"bookdown"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
+Then, go to the Quarto official website to download the quarto package.
+Here is \href{https://quarto.org/docs/get-started/?target=_blank}{the
+link}.
 
 \section{Compile a Book}\label{compile-a-book}
 
 Follow the steps below to download and compile the source code for this
-template in R Bookdown.
+template in Quarto Bookdown.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi})}
 \tightlist
 \item
-  Go to the
-  \href{https://uniofnottm.sharepoint.com/sites/AccessibleMathsMaterials?target=_blank}{Accessible
-  Maths Materials Sharepoint} and click on the \textbf{Download Source
-  Files} link under R Bookdown to download \texttt{BookdownExample.zip}.
+  Download this project using Github. (You can directly go to the GitHub
+  page by clicking the sidebar icon)
 \item
-  Move the file to the folder where you want to store your notes, then
-  unzip it to the same folder.
+  Install the Quarto extension for your IDE, such as VSCode, IntelliJ or
+  RStudio.
 \end{enumerate}
 
 Instructions for unzipping files:
 {[}\href{https://support.microsoft.com/en-us/windows/zip-and-unzip-files-f6dde0a7-0fec-8294-e1d3-703ed85e7ebc?target=_blank}{Windows},
 \href{https://support.apple.com/en-gb/guide/mac-help/mchlp2528/mac\#:~:text=Unzip\%20(expand)\%20a\%20compressed\%20item,zip\%20file.?target=_blank}{MacOS},
 \href{https://unstop.com/blog/how-to-unzip-a-file-in-linux?target=_blank}{Linux}{]}
+Moreover, in some new IDEs, you can directly clone the project by
+entering the GitHub URL.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi})}
 \setcounter{enumi}{2}
+\tightlist
 \item
-  In RStudio in the top-right corner click on the blue Project sign.
-  Click on ``Open Project'' and navigate to your unzipped file, then
-  open \texttt{r\_bookdown\_template.Rproj}.
-\item
-  In the box with ``Environment'', ``History'', ``Connections'',
-  ``Build'', ``Tutorial'', click on the ``Build'' tab, then click on the
-  ``Build Book'' button.
-\item
-  On clicking the button in the previous step, a preview of your
-  compiled book should appear. To view your book outside of RStudio,
-  navigate to the ``\_book'' subfolder that was created when you
-  compiled your book, then open \texttt{index.html} in your favourite
-  browser.
+  Open the terminal (make sure you are in the root directory of the
+  project), and type the following command:
 \end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{quarto}\NormalTok{ render}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  To view your book outside of RStudio, navigate to the ``\_book''
+  subfolder that was created when you compiled your book, then open
+  \texttt{index.html} in your favourite browser. Or you can simply set
+  up a local server by running the following command in the terminal:
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{quarto}\NormalTok{ preview}
+\end{Highlighting}
+\end{Shaded}
 
 \section{Upload Your Book to Moodle}\label{upload-your-book-to-moodle}
 
@@ -369,84 +386,58 @@ click here.}
 
 \bookmarksetup{startatroot}
 
-\chapter{Some R Bookdown Features}\label{some-r-bookdown-features}
+\chapter{Some Quarto Bookdown
+Features}\label{some-quarto-bookdown-features}
 
-In this section, we describe the basic use of R Bookdown and introduce
-some of the more advanced features/customisation. What we present here
-is representative but not exhaustive. R Bookdown is very well documented
-by its creator (\href{https://yihui.org/?target=_blank}{Yihui Xie}) and
-others.
+In this section, we describe the basic use of Quarto Bookdown and
+introduce some of the more advanced features/customisation. What we
+present here is representative but not exhaustive.
 
 \begin{itemize}
 \item
-  See \href{https://bookdown.org/?target=_blank}{bookdown.org} for lots
-  of useful resources, including the comprehensive
-  \href{https://bookdown.org/yihui/bookdown/?target=_blank}{Bookdown
+  See \href{https://quarto.org/?target=_blank}{bookdown.org} for lots of
+  useful resources, including the comprehensive
+  \href{https://quarto.org/docs/guide/?target=_blank}{Bookdown
   Documentation}.
 \item
-  For advanced use of R Bookdown, the
-  \href{https://rstudio4edu.github.io/rstudio4edu-book/make-book.html?target=_blank}{rstudio4edu
-  guidance} is great.
-\item
-  We have a dedicated
-  \href{https://teams.microsoft.com/l/channel/19\%3a2e7592dc4df24a42aa4f4f48ae54c96f\%40thread.tacv2/HTML\%2520documents?groupId=43e79c12-f2dd-4e2b-9cb0-83958af28cdb&tenantId=67bda7ee-fd80-41ef-ac91-358418290a1e?target=_blank}{HTML/Accessibility
-  channel} on the School's Digital Learning Resources Team, where you
-  can ask and discuss questions.
+  For advanced use of Quarto Bookdown, the
+  \href{https://quarto.org/docs/gallery/?target=_blank}{gallery of
+  Quarto templates} is great.
 \end{itemize}
 
 \section{Bookdown File Structure}\label{bookdown-file-structure}
 
-There are a number of files that make up the R Bookdown structure, but
-you'll be glad to know that you can ignore most of them. The ones you
-will spend most of your time editing are the ones with the \texttt{.Rmd}
-extension.
+There are a number of files that make up the Quarto Bookdown structure,
+but you'll be glad to know that you can ignore most of them. The ones
+you will spend most of your time editing are the ones with the
+\texttt{.qmd} extension.
 
 \begin{itemize}
 \item
-  \texttt{index.Rmd} is recognised by R Bookdown as the first chapter of
-  your book. You can define the \texttt{title} and \texttt{author} of
-  your book in lines 2 and 3 of this file respectively. You should not
-  need to edit the remaining information in lines 4-15. Start writing
-  the first section of your book after the \texttt{-\/-\/-} in line 16.
+  \texttt{index.qmd} is recognised by Quarto Bookdown as the first
+  chapter of your book. This will also be the homepage of your website.
 \item
-  The remaining \texttt{.Rmd} files contain the subsequent sections of
-  your book. RMarkdown will read the files in alphabetical order, so a
-  sensible naming convention for your files is
-  \texttt{01-\textless{}section-name\textgreater{}.Rmd},
-  \texttt{02-\textless{}section-name\textgreater{}.Rmd}, etc. Note that
-  each file can contain multiple sections.
+  The remaining \texttt{.qmd} files contain the subsequent sections of
+  your book. Quarto Markdown will read the files in the order that you
+  defined in the \texttt{\_quarto.yaml}.
 \end{itemize}
 
-If you prefer, you can write your entire book in \texttt{index.Rmd}, but
+If you prefer, you can write your entire book in \texttt{index.qmd}, but
 this is not recommended as your file could get very big!
 
 \begin{itemize}
+\tightlist
 \item
-  \texttt{output.yml} provides R Bookdown with some information on how
-  to compile your document. The only part of this you need to edit is
-  line 13, where you can replace Lisa's name with your own and update
-  the link to your homepage.
-\item
-  \texttt{bookdown.yml} provides R Bookdown with some more information
-  on your document details. The only lines of interest are:
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Line 1: Update this to change the output filename of your book;
-  \item
-    Line 4: Update this to change the prefix of each
-    \texttt{\#\ Heading}. For this template, we have set this to
-    \texttt{"Part\ "} (note the space at the end). If you would rather
-    not have a prefix at all, comment out this line by inserting a
-    \texttt{\#} at the start of line 4.
-  \end{itemize}
+  \texttt{\_quarto.yml} provides some basic metadata about your book,
+  such as the title, author, and date. Additionally, there are plenty of
+  settings you can customise in this file, such as the output format,
+  font size, and layout.
 \end{itemize}
 
 \section{Markdown Basics}\label{markdown-basics}
 
-If you're completely new to R Markdown, the
-\href{https://rmarkdown.rstudio.com/authoring_basics.html?target=_blank}{Markdown
+If you're completely new to Quarto Markdown, the
+\href{https://quarto.org/docs/authoring/markdown-basics.html}{Markdown
 Basics} guide provides an excellent overview of the most common syntax.
 Most of it is very straightforward and intuitive, but will take some
 getting used to if you are accustomed to LaTeX.
@@ -478,9 +469,10 @@ Use the syntax
 \end{Highlighting}
 \end{Shaded}
 
-for headings, subheadings, etc. R Bookdown will automatically number
-your headings. To suppress the heading number, add \texttt{\{-\}} at the
-end of your heading, e.g.~\texttt{\#\#\ Unnumbered\ Subheading\ \{-\}}.
+for headings, subheadings, etc. Quarto Bookdown will automatically
+number your headings. To suppress the heading number, add \texttt{\{-\}}
+at the end of your heading,
+e.g.~\texttt{\#\#\ Unnumbered\ Subheading\ \{-\}}.
 
 \subsubsection*{Links and References}\label{links-and-references}
 \addcontentsline{toc}{subsubsection}{Links and References}
@@ -501,11 +493,11 @@ open in a new tab when clicked.
 Link to other parts of your book using heading names.
 
 \begin{verbatim}
-Find out how to [Upload your book to Moodle][Upload Your Book to Moodle].
+Find out how to make [Links and References][Links and References].
 \end{verbatim}
 
-Find out how to \hyperref[upload-your-book-to-moodle]{Upload your book
-to Moodle}.
+Find out how to make \hyperref[links-and-references]{Links and
+References}.
 
 We recommend suppressing numbers from Heading 4 onwards.
 
@@ -577,8 +569,7 @@ Mathematics can be entered using familiar LaTeX commands and delimiters.
 \subsubsection*{Inline Mathematics}\label{inline-mathematics}
 \addcontentsline{toc}{subsubsection}{Inline Mathematics}
 
-Inline mathematics is delimited using either \texttt{\$...\$} or
-\texttt{\textbackslash{}(...\textbackslash{})}.
+Inline mathematics is delimited using either \texttt{\$...\$}.
 
 The syntax
 
@@ -594,9 +585,8 @@ yields: Consider the equation \(y = mx+c\).
 \addcontentsline{toc}{subsubsection}{Display Mathematics}
 
 Display mathematics (unnumbered) is delimited using either
-\texttt{\$\$...\$\$}, \texttt{\textbackslash{}{[}...\textbackslash{}{]}}
-or
-\texttt{\textbackslash{}begin\{equation*\}...\textbackslash{}end\{equation*\}}.
+\texttt{\$\$...\$\$} or
+\texttt{\textbackslash{}begin\{equation\}...\textbackslash{}end\{equation\}}.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -617,19 +607,18 @@ yields:
 
 Enter a numbered equation in the usual way using
 \texttt{\textbackslash{}begin\{equation\}...\textbackslash{}end\{equation\}}.
-Whilst the equation environment follows conventional LaTeX syntax, R
-Bookdown does not support \texttt{\textbackslash{}label},
+Whilst the equation environment follows conventional LaTeX syntax,
+Quarto Bookdown does not support \texttt{\textbackslash{}label},
 \texttt{\textbackslash{}eqref} to tag and reference equations. See the
 example below for how to tag and reference an equation in R Bookdown.
 
-\phantomsection\label{EqRef}
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{$$}
 \NormalTok{  f\textbackslash{}left(k\textbackslash{}right) = \textbackslash{}binom\{n\}\{k\} p\^{}k\textbackslash{}left(1{-}p\textbackslash{}right)\^{}\{n{-}k\}}
 \NormalTok{$$ \{\#eq{-}binom\}}
     
-\NormalTok{Consider the Binomial Theorem @eq{-}binom.}
+\NormalTok{Consider the Binomial Theorem (@eq{-}binom).}
 \end{Highlighting}
 \end{Shaded}
 
@@ -637,7 +626,7 @@ example below for how to tag and reference an equation in R Bookdown.
 f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
 }\end{equation}
 
-Consider the Binomial Theorem Equation~\ref{eq-binom}.
+Consider the Binomial Theorem (Equation~\ref{eq-binom}).
 
 Do not use underscores (``\_``) in your labels for cross referencing
 equations, or any other parts (e.g.~tables, theorems, etc. which are
@@ -654,7 +643,7 @@ this character in labels causes a conflict.
 
 You may be the sort of person who likes writing your own LaTeX commands
 to save some typing. You can add custom commands anywhere in a
-\texttt{.Rmd} file and they will work in the expected way, as long as
+\texttt{.qmd} file and they will work in the expected way, as long as
 you define the command before its first use in your book.
 
 The best place to define your custom commands is in \texttt{index.md}
@@ -691,83 +680,15 @@ Consider the differential equation \[
 \frac{\mathrm{d}^2 y}{\mathrm{d}x}+3\frac{\mathrm{d}y}{\mathrm{d}x}-y=0.
 \]
 
-\subsubsection*{Multiple and Multiline
-Equations}\label{multiple-and-multiline-equations}
-\addcontentsline{toc}{subsubsection}{Multiple and Multiline Equations}
+\subsubsection*{Multiline Equations}\label{multiline-equations}
+\addcontentsline{toc}{subsubsection}{Multiline Equations}
 
-R Bookdown interprets the \texttt{align} environment in the usual way.
-You can tag each line individually to refer back to specific equations.
-Replace the tag with \texttt{\textbackslash{}notag} to suppress the
-numbering of a line.
+Quarto Bookdown seems to not support the multi-ref environment in one
+equation.
 
-Unfortunately, R Bookdown does not support the \texttt{subequations}
-environment (e.g.~for labelling equations 2.2a, 2.2b etc.)
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{\textbackslash{}begin}\NormalTok{\{}\ExtensionTok{align}\NormalTok{\}}
-\SpecialStringTok{g(X\_\{n\}) \&= g(}\SpecialCharTok{\textbackslash{}theta}\SpecialStringTok{)+g\textquotesingle{}(\{}\SpecialCharTok{\textbackslash{}tilde}\SpecialStringTok{\{}\SpecialCharTok{\textbackslash{}theta}\SpecialStringTok{\}\})(X\_\{n\}{-}}\SpecialCharTok{\textbackslash{}theta}\SpecialStringTok{) (}\SpecialCharTok{\textbackslash{}\#}\SpecialStringTok{eq:align1) }\SpecialCharTok{\textbackslash{}\textbackslash{}}
-\SpecialCharTok{\textbackslash{}sqrt}\SpecialStringTok{\{n\}[g(X\_\{n\}){-}g(}\SpecialCharTok{\textbackslash{}theta}\SpecialStringTok{)] \&= g\textquotesingle{}}\SpecialCharTok{\textbackslash{}left}\SpecialStringTok{(\{}\SpecialCharTok{\textbackslash{}tilde}\SpecialStringTok{\{}\SpecialCharTok{\textbackslash{}theta}\SpecialStringTok{\}\}}\SpecialCharTok{\textbackslash{}right}\SpecialStringTok{)}
-\SpecialStringTok{  }\SpecialCharTok{\textbackslash{}sqrt}\SpecialStringTok{\{n\}[X\_\{n\}{-}}\SpecialCharTok{\textbackslash{}theta}\SpecialStringTok{ ] }
-\SpecialStringTok{(}\SpecialCharTok{\textbackslash{}\#}\SpecialStringTok{eq:align2)}
-\KeywordTok{\textbackslash{}end}\NormalTok{\{}\ExtensionTok{align}\NormalTok{\}}
-  
-\NormalTok{Consider the equations }\FunctionTok{\textbackslash{}@ref}\NormalTok{(eq:align1) and }\FunctionTok{\textbackslash{}@ref}\NormalTok{(eq:align2).}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{align}
-g(X_{n}) &= g(\theta)+g'({\tilde{\theta}})(X_{n}-\theta) (\#eq:align1) \\
-\sqrt{n}[g(X_{n})-g(\theta)] &= g'\left({\tilde{\theta}}\right)
-  \sqrt{n}[X_{n}-\theta ] 
-(\#eq:align2)
-\end{align}
-
-Consider equations @ref(eq:align1) and @ref(eq:align2).
-
-There is a (possibly unavoidable) bug with the cross-referencing of
-multiple equations in the align environment. Whilst adding a label to
-each equation successfully adds a number to the equation where it is
-displayed, the hyperlink does not work for the first equation. In
-general, only the hyperlink to the final equation will work. In the
-situation where you have multiple equations and it is important to be
-able to individually reference each one, we recommend writing each
-equation in its own \texttt{equation} environment using the method in
-Example @ref(exm:EqRef).
-
-You can use the \texttt{split} environment inside \texttt{equation} so
-that all lines in a multiline equation share the same number.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{\textbackslash{}begin}\NormalTok{\{}\ExtensionTok{equation}\NormalTok{\}}\SpecialStringTok{ }
-\KeywordTok{\textbackslash{}begin}\NormalTok{\{}\ExtensionTok{split}\NormalTok{\}}
-\SpecialCharTok{\textbackslash{}mathrm}\SpecialStringTok{\{Var\}(}\SpecialCharTok{\textbackslash{}hat}\SpecialStringTok{\{}\SpecialCharTok{\textbackslash{}beta}\SpecialStringTok{\}) \& =}\SpecialCharTok{\textbackslash{}mathrm}\SpecialStringTok{\{Var\}((X\textquotesingle{}X)\^{}\{{-}1\}X\textquotesingle{}y)}\SpecialCharTok{\textbackslash{}\textbackslash{}}
-\SpecialStringTok{ \& =(X\textquotesingle{}X)\^{}\{{-}1\}X\textquotesingle{}}\SpecialCharTok{\textbackslash{}mathrm}\SpecialStringTok{\{Var\}(y)((X\textquotesingle{}X)\^{}\{{-}1\}X\textquotesingle{})\textquotesingle{}}\SpecialCharTok{\textbackslash{}\textbackslash{}}
-\SpecialStringTok{ \& =(X\textquotesingle{}X)\^{}\{{-}1\}X\textquotesingle{}}\SpecialCharTok{\textbackslash{}mathrm}\SpecialStringTok{\{Var\}(y)X(X\textquotesingle{}X)\^{}\{{-}1\}}\SpecialCharTok{\textbackslash{}\textbackslash{}}
-\SpecialStringTok{ \& =(X\textquotesingle{}X)\^{}\{{-}1\}X\textquotesingle{}}\SpecialCharTok{\textbackslash{}sigma}\SpecialStringTok{\^{}\{2\}IX(X\textquotesingle{}X)\^{}\{{-}1\}}\SpecialCharTok{\textbackslash{}\textbackslash{}}
-\SpecialStringTok{ \& =(X\textquotesingle{}X)\^{}\{{-}1\}}\SpecialCharTok{\textbackslash{}sigma}\SpecialStringTok{\^{}\{2\}}
-\KeywordTok{\textbackslash{}end}\NormalTok{\{}\ExtensionTok{split}\NormalTok{\}}
-\SpecialStringTok{(}\SpecialCharTok{\textbackslash{}\#}\SpecialStringTok{eq:var{-}beta)}
-\KeywordTok{\textbackslash{}end}\NormalTok{\{}\ExtensionTok{equation}\NormalTok{\} }
-
-\NormalTok{See }\FunctionTok{\textbackslash{}@ref}\NormalTok{(eq:var{-}beta) for the calculation of }\SpecialStringTok{\textbackslash{}(}\SpecialCharTok{\textbackslash{}mathrm}\SpecialStringTok{\{Var\}(}\SpecialCharTok{\textbackslash{}hat}\SpecialStringTok{\{}\SpecialCharTok{\textbackslash{}beta}\SpecialStringTok{\})\textbackslash{})}\NormalTok{.}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{equation} 
-\begin{split}
-\mathrm{Var}(\hat{\beta}) & =\mathrm{Var}((X'X)^{-1}X'y)\\
- & =(X'X)^{-1}X'\mathrm{Var}(y)((X'X)^{-1}X')'\\
- & =(X'X)^{-1}X'\mathrm{Var}(y)X(X'X)^{-1}\\
- & =(X'X)^{-1}X'\sigma^{2}IX(X'X)^{-1}\\
- & =(X'X)^{-1}\sigma^{2}
-\end{split}
-(\#eq:var-beta)
-\end{equation}
-
-See @ref(eq:var-beta) for the calculation of
-\(\mathrm{Var}(\hat{\beta})\).
+Unfortunately, Quarto Bookdown does not support the
+\texttt{subequations} environment (e.g.~for labelling equations 2.2a,
+2.2b etc.)
 
 \section{Tables}\label{tables}
 
@@ -796,8 +717,8 @@ Row 2 & Number & Number \\
 Only very simple tables can be created using Markdown syntax (by
 design). This is generally a good thing for accessibility, but if you
 want to create more intricate tables, you can do so using raw HTML
-inside a \texttt{.Rmd} file (HTML is interpreted by R Bookdown just as
-readily as Markdown).
+inside a \texttt{.qmd} file (HTML is interpreted by Quarto Bookdown just
+as readily as Markdown).
 
 If you get fed up dealing with plain text to make your table, there are
 many good Markdown/HTML table generators online.
@@ -808,9 +729,9 @@ this one}, but others are available.
 
 We look at two approaches for adding the same image. We add
 \textbf{alternative text (usually referred to as ``alt text'')} in both
-cases. You will see how R Markdown treats them differently.
+cases. You will see how Quarto Markdown treats them differently.
 
-The files must either be in the same directory as your \texttt{.Rmd}
+The files must either be in the same directory as your \texttt{.qmd}
 file(s), or you need to specify the path to the subfolder containing
 your image file.
 
@@ -821,7 +742,7 @@ This is the easier approach but the alt text is not as nice (we have
 cheated and written it as a caption).
 
 \begin{verbatim}
-![Here is the alt text](workers.png)
+![Here is the caption](workers.png "alt text")
 \end{verbatim}
 
 \begin{figure}[H]
@@ -830,7 +751,7 @@ cheated and written it as a caption).
 
 }
 
-\caption{Here is the alt text}
+\caption{Here is the caption text}
 
 \end{figure}%
 
@@ -870,9 +791,23 @@ figures in their captions.
 \subsection{Generating Images Using R (or
 Python)}\label{generating-images-using-r-or-python}
 
-Press Ctrl+Alt+I to add R code. This adds the chunk below and you can
-add in R code. Python (or other languages) can also be added by pressing
-the `+C' image at the top right corner.
+Use the following format to add R code. This adds the chunk below and
+you can add in R code. Python (or other languages) can also be added by
+changing the prefix to `python' and change the setting accordingly
+\href{https://quarto.org/docs/computations/python.html}{(python
+setting)}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{::: \{.example name="Create Image Using R"\}}
+\InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}\{r,fig.alt="A graph that shows...", fig.cap="A graph demonstrating..."\}}
+\InformationTok{x\textless{}{-}rnorm(100,mean=4,sd=2)}
+\InformationTok{y\textless{}{-}x\^{}\{2\}}
+\InformationTok{plot(x,y,lwd=4,main="Mock plot")}
+\InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
+\NormalTok{:::}
+\end{Highlighting}
+\end{Shaded}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -884,7 +819,7 @@ the `+C' image at the top right corner.
 
 \begin{figure}[H]
 
-{\centering \pandocbounded{\includegraphics[keepaspectratio]{02-Part2_files/figure-pdf/unnamed-chunk-14-1.pdf}}
+{\centering \pandocbounded{\includegraphics[keepaspectratio]{02-Part2_files/figure-pdf/unnamed-chunk-13-1.pdf}}
 
 }
 
@@ -895,14 +830,14 @@ the `+C' image at the top right corner.
 You can also hide code, so that graphs are produced without showing the
 code, or you can hide output so the code is shown without the results
 etc. see
-\href{https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf?target=_blank}{the
-R Markdown cheatsheet} for more information.
+\href{https://quarto.org/docs/computations/execution-options.html}{the
+Quarto execution options} for more information.
 
 The graph is produced but the code is hidden, by setting echo=FALSE.
 
 \begin{figure}[H]
 
-{\centering \pandocbounded{\includegraphics[keepaspectratio]{02-Part2_files/figure-pdf/unnamed-chunk-15-1.pdf}}
+{\centering \pandocbounded{\includegraphics[keepaspectratio]{02-Part2_files/figure-pdf/unnamed-chunk-14-1.pdf}}
 
 }
 
@@ -922,8 +857,8 @@ Here, the code is shown but the graph is not shown using eval=FALSE.
 
 \section{Environments}\label{environments}
 
-R Bookdown has several built-in environments, such as Theorem, Example,
-etc to help organise your notes.
+Quarto Bookdown has several built-in environments, such as Theorem,
+Example, etc to help organise your notes.
 
 \subsection{Numbered Environments}\label{numbered-environments}
 
@@ -931,8 +866,8 @@ The following environments have an automatic numbering system and so can
 be cross-referenced.
 
 \begin{longtable}[]{@{}lll@{}}
-\caption{(\#tab:num-envs) Numbered Environments in R
-Bookdown}\tabularnewline
+\caption{Numbered Environments in Quarto
+Bookdown}\label{tbl-numEnvs}\tabularnewline
 \toprule\noalign{}
 Environment & Printed Name & Label Prefix \\
 \midrule\noalign{}
@@ -996,7 +931,7 @@ Numbered environments are cross referenced in a similar way to equations
 \NormalTok{$$a\^{}2 + b\^{}2 = c\^{}2.$$}
 \NormalTok{:::}
   
-\NormalTok{We use Pythagoras\textquotesingle{} Theorem @thm{-}pyth to find the length of the missing side.}
+\NormalTok{We use Pythagoras\textquotesingle{} @thm{-}pyth to find the length of the missing side.}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1009,21 +944,41 @@ sides, we have \[a^2 + b^2 = c^2.\]
 
 \end{theorem}
 
-We use Pythagoras' Theorem Theorem~\ref{thm-pyth} to find the length of
-the missing side.
+We use Pythagoras' Theorem~\ref{thm-pyth} to find the length of the
+missing side.
 
 The syntax for referencing environments is
-\texttt{@ref(\textless{}prefix\textgreater{}-\textless{}label\textgreater{})}.
-Refer to Table @ref(tab:num-envs) for the prefix corresponding to each
-environment type.
+\texttt{@\textless{}prefix\textgreater{}-\textless{}label\textgreater{}}.
+Refer to Table~\ref{tbl-numEnvs} for the prefix corresponding to each
+environment type. And please note that you do not have to include the
+\texttt{prefix} in the sentence.
 
-The prefix for a table reference is \texttt{tab}.
+Specially for tables, the following format is required.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+
+\FunctionTok{\#\#\# Unnumbered Environments}
+
+\NormalTok{|Environment| Printed Name |}
+\NormalTok{|:{-}{-}{-}{-}{-}{-}|:{-}{-}{-}{-}{-}{-}{-}|}
+\NormalTok{|proof | Proof |}
+\NormalTok{|remark | Remark|}
+\NormalTok{|note | Note|}
+\NormalTok{|tip | Tip|}
+\NormalTok{|activity| Activity|}
+\NormalTok{|discussion| Discussion|}
+\NormalTok{|solution| Solution|}
+
+\NormalTok{: Other Environments in Quarto Bookdown \{\#tbl{-}otherEnv\}}
+\end{Highlighting}
+\end{Shaded}
 
 \subsection{Unnumbered Environments}\label{unnumbered-environments}
 
 \begin{longtable}[]{@{}ll@{}}
-\caption{(\#tab:oth-envs) Other Environments in R
-Bookdown}\tabularnewline
+\caption{Other Environments in Quarto
+Bookdown}\label{tbl-otherEnv}\tabularnewline
 \toprule\noalign{}
 Environment & Printed Name \\
 \midrule\noalign{}
@@ -1049,8 +1004,8 @@ The code for the School Template is in \texttt{style.css}.
 
 If you want to make adjustments to the colour scheme, or add your own
 custom environments, then either edit your local copy of
-\texttt{style.css}, or (if you're not familiar with CSS) contact
-\href{mailto:tom.wicks@nottingham.ac.uk}{Tom} or
+\texttt{style.css} and \texttt{themes} folder, or (if you're not
+familiar with CSS) contact
 \href{mailto:lisa.mott@nottingham.ac.uk}{Lisa} to request a
 change/update.
 
@@ -1116,12 +1071,11 @@ alternative link.}
 
 \textbf{How to use the template - Another video example}
 
-Note to use all of this you will need R studio and R to be installed on
-your machine. Then you just need to open the project in R studio.
+Note to use all of this you will need some IDE and R to be installed on
+your machine. Then you just need to open the project in your IDE.
 
-Then in R studio just create a new .Rmd file to add a new chapter and
-just save it as 01, 02, 03, 04 etc. in the name for the order you want
-that chapter to appear.
+Then just create a new .qmd file to add a new chapter and add it into
+\texttt{\_quarto.yaml} for the order you want that chapter to appear.
 
 A video below shows what to do in more detail. If the video does not
 work then please use
@@ -1160,65 +1114,29 @@ beginners.
 It is quite easy to use HTML to add {colour to text.} However when you
 change the theme to night you will not be able to see the colour.
 
-\href{https://www.nottingham.ac.uk/biosciences/people/qingqi.wang}{Steve
-Wang} has provided a solution that uses HTML and R to use colours that
-change in the three different themes.
+To display content only in light mode, use the .light-content CSS class;
+to display content only in dark mode, use the .dark-content class.
 
-In this template we have set three default colour schemes that are
-accessible in all of the three themes.
+Usually you should provide light and dark content in the same place and
+at the same size, so that page layout is unaffected when switching
+between modes.
 
-If you would like to change the colour of some text you can do by
-creating the following formula in R. The class myhl is defined in the
-style file.
+For example, the paragraph produced by the following code will contain
+different text in light and dark mode:
 
-The below function is so you can see the output of the above function
-and can be deleted.
+\begin{verbatim}
+::: {.light-content}
+<span style="color:blue">This text will be shown in light mode.</span>
+:::
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{colorize}\OtherTok{\textless{}{-}}\ControlFlowTok{function}\NormalTok{(x,color)\{}
-  \ControlFlowTok{if}\NormalTok{ (knitr}\SpecialCharTok{::}\FunctionTok{is\_latex\_output}\NormalTok{()) \{}
-    \FunctionTok{sprintf}\NormalTok{(}\StringTok{"}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{textcolor\{\%s\}\{\%s\}"}\NormalTok{,color,x)}
-\NormalTok{  \} }\ControlFlowTok{else} \ControlFlowTok{if}\NormalTok{ (knitr}\SpecialCharTok{::}\FunctionTok{is\_html\_output}\NormalTok{())\{}
-    \FunctionTok{sprintf}\NormalTok{(}\StringTok{"\textless{}span class=\textquotesingle{}myhl\textquotesingle{}\textgreater{}\%s\textless{}/span\textgreater{}"}\NormalTok{ ,x)}
-\NormalTok{  \} }\ControlFlowTok{else}\NormalTok{ x}
-\NormalTok{\}}
-\end{Highlighting}
-\end{Shaded}
+::: {.dark-content}
+<span style="color:green">This text will be shown in dark mode.</span>
+:::
+\end{verbatim}
 
-We can them add \textcolor{blue}{some words in blue.} You may want to
-see what happens when you change the theme to night in the output.
+{This text will be shown in light mode.}
 
-We can then define another colour using the following
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{colorize2}\OtherTok{\textless{}{-}}\ControlFlowTok{function}\NormalTok{(x,color)\{}
-  \ControlFlowTok{if}\NormalTok{ (knitr}\SpecialCharTok{::}\FunctionTok{is\_latex\_output}\NormalTok{()) \{}
-    \FunctionTok{sprintf}\NormalTok{(}\StringTok{"}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{textcolor\{\%s\}\{\%s\}"}\NormalTok{,color,x)}
-\NormalTok{  \} }\ControlFlowTok{else} \ControlFlowTok{if}\NormalTok{ (knitr}\SpecialCharTok{::}\FunctionTok{is\_html\_output}\NormalTok{())\{}
-    \FunctionTok{sprintf}\NormalTok{(}\StringTok{"\textless{}span class=\textquotesingle{}myhl2\textquotesingle{}\textgreater{}\%s\textless{}/span\textgreater{}"}\NormalTok{ ,x)}
-\NormalTok{  \} }\ControlFlowTok{else}\NormalTok{ x}
-\NormalTok{\}}
-\end{Highlighting}
-\end{Shaded}
-
-Here is some text using the \textcolor{red}{red theme}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{colorize3}\OtherTok{\textless{}{-}}\ControlFlowTok{function}\NormalTok{(x,color)\{}
-  \ControlFlowTok{if}\NormalTok{ (knitr}\SpecialCharTok{::}\FunctionTok{is\_latex\_output}\NormalTok{()) \{}
-    \FunctionTok{sprintf}\NormalTok{(}\StringTok{"}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{textcolor\{\%s\}\{\%s\}"}\NormalTok{,color,x)}
-\NormalTok{  \} }\ControlFlowTok{else} \ControlFlowTok{if}\NormalTok{ (knitr}\SpecialCharTok{::}\FunctionTok{is\_html\_output}\NormalTok{())\{}
-    \FunctionTok{sprintf}\NormalTok{(}\StringTok{"\textless{}span class=\textquotesingle{}myhl3\textquotesingle{}\textgreater{}\%s\textless{}/span\textgreater{}"}\NormalTok{ ,x)}
-\NormalTok{  \} }\ControlFlowTok{else}\NormalTok{ x}
-\NormalTok{\}}
-\end{Highlighting}
-\end{Shaded}
-
-Finally here is some text using the
-\textcolor{green}{final colour scheme.}
+{This text will be shown in dark mode.}
 
 \section{Adding colour to maths
 output}\label{adding-colour-to-maths-output}
