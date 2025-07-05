@@ -276,3 +276,17 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0
 .book .sidebar .logo {
   background-image: url('/logos/UoNTransparentDark.png');
 }
+
+.module-logo-light {
+  height: 70px;
+  margin-top: 5px;
+  margin-left: 10px;
+  display: none;
+}
+
+.module-logo-dark {
+  height: 70px;
+  margin-top: 5px;
+  margin-left: 10px;
+  display: block;
+}

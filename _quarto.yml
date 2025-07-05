@@ -41,7 +41,9 @@ format:
       dark: theme/dark.scss
     link-external-newwindow: true
     respect-user-color-scheme: true
-
+    margin-header: |
+      <img src="/logos/logo_light.png" class="module-logo-light" alt="Logo" />
+      <img src="/logos/logo_dark.png" class="module-logo-dark" alt="Logo" />
 
   pdf:
     number-depth: 3
